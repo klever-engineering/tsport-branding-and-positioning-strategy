@@ -2944,6 +2944,21 @@ main {
     display: none;
   }
 
+  button,
+  .nav-trigger,
+  .tab,
+  .pill,
+  .chip,
+  .icon-btn,
+  .ghost,
+  .primary {
+    min-height: 44px;
+  }
+
+  .icon-btn {
+    min-width: 44px;
+  }
+
   .discover-grid {
     grid-template-columns: 1fr;
   }
@@ -3023,21 +3038,6 @@ main {
 
   .nav-utility .nav-toggle {
     flex: 0 0 40px;
-  }
-
-  button,
-  .nav-trigger,
-  .tab,
-  .pill,
-  .chip,
-  .icon-btn,
-  .ghost,
-  .primary {
-    min-height: 44px;
-  }
-
-  .icon-btn {
-    min-width: 44px;
   }
 
   .hero-copy h1 {
