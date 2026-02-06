@@ -2772,7 +2772,8 @@ main {
   border-radius: 18px;
   padding: 14px;
   box-shadow: var(--shadow);
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 6px;
   position: relative;
 }
@@ -2782,9 +2783,10 @@ main {
 }
 
 .timeline .ghost {
-  justify-self: start;
+  align-self: flex-start;
   padding: 8px 14px;
   font-size: 0.85rem;
+  width: fit-content;
 }
 
 .timeline-links .ghost {
@@ -2808,6 +2810,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  margin-top: 4px;
 }
 
 .timeline-title {
