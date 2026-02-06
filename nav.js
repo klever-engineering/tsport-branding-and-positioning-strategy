@@ -63,6 +63,14 @@
     if (!nav.contains(event.target)) setNavOpen(false);
   });
 
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') setNavOpen(false);
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) setNavOpen(false);
+  });
+
   const bindDropdowns = () => {
     document.querySelectorAll('.nav-item .nav-trigger').forEach((trigger) => {
       trigger.addEventListener('click', (event) => {
