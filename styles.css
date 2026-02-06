@@ -2777,6 +2777,21 @@ main {
   position: relative;
 }
 
+.timeline-item p {
+  margin: 0;
+}
+
+.timeline .ghost {
+  justify-self: start;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+}
+
+.timeline-links .ghost {
+  padding: 8px 12px;
+  font-size: 0.8rem;
+}
+
 .timeline-item::before {
   content: '';
   position: absolute;
