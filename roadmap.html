@@ -14,7 +14,7 @@
   <header class="site-header">
     <nav class="nav">
       <a class="logo" href="index.html">TSport Swim Platform</a>
-      <div class="nav-links">
+      <div class="nav-primary">
         <div class="nav-item">
           <button class="nav-trigger" type="button">For Families</button>
           <div class="nav-dropdown">
@@ -46,10 +46,15 @@
             <a href="index.html#contact">Contact</a>
           </div>
         </div>
-      </div>      
-      <div class="nav-actions">
+      </div>
+      <div class="nav-utility">
         <a class="ghost nav-dashboard" href="dashboard.html">Dashboard</a>
-        <a class="ghost" href="index.html#discover">Search</a>
+        <button class="icon-btn nav-search" type="button" data-action="search" aria-label="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"></circle>
+            <path d="M16.5 16.5L21 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+          </svg>
+        </button>
         <a class="ghost" href="dashboard.html">Log in</a>
         <a class="primary" href="index.html#pricing">Start Free</a>
       </div>
@@ -243,6 +248,7 @@
     </svg>
   </div>
 </footer>
+  <script src="nav.js"></script>
   <script src="resources.js" defer></script>
   <script src="onboarding.js" defer></script>
 </body>
