@@ -1732,6 +1732,16 @@ main {
   color: var(--muted);
 }
 
+.differentiators .strategy-card {
+  margin-top: 18px;
+}
+
+.differentiators .check-list {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  column-gap: 18px;
+  row-gap: 10px;
+}
+
 .check-list li::before {
   content: '✓';
   color: var(--mint-dark);
