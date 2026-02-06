@@ -1,4 +1,4 @@
-# TSport Swim Platform — Brand & Positioning Prototype
+# TSport Swim — Brand & Positioning Prototype
 
 A clickable, front‑end prototype for a premium swim booking platform. It showcases a modern brand system, strategic positioning, and end‑to‑end user flows for families, venues, and organizations.
 
