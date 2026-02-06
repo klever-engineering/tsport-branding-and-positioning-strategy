@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Meta Ads Kit — TSport Swim Platform</title>
-  <meta name="description" content="Facebook and Instagram ads kit for swim programs." />
+  <title>Venues — TSport Swim Platform</title>
+  <meta name="description" content="Fill pool lanes with qualified swimmers using automated scheduling and marketing tools." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="resources-page">
+<body class="strategy-page">
   <div class="page-bg"></div>
   <header class="site-header">
     <nav class="nav">
@@ -70,70 +70,70 @@
   <main class="strategy">
     <section class="strategy-hero">
       <div>
-        <p class="eyebrow">Meta Ads kit</p>
-        <h1>Facebook + Instagram campaigns built for parents and clubs.</h1>
-        <p class="sub">Plug‑and‑play campaigns with copy, creative hooks, and booking CTAs.</p>
+        <p class="eyebrow">For venues</p>
+        <h1>Fill Your Pool Lanes with Qualified Swimmers</h1>
+        <p class="sub">Turn empty slots into premium bookings with automated scheduling and trusted demand.</p>
         <div class="hero-cta">
-          <a class="primary" href="legal.html#support">Request campaign files</a>
-          <a class="ghost" href="resources.html">Back to resources</a>
+          <button class="primary" data-action="start-trial">List your pool</button>
+          <button class="ghost" data-action="owner-demo">Request venue demo</button>
+        </div>
+        <div class="trust-signals">
+          <span>Automated scheduling</span>
+          <span>Verified demand</span>
+          <span>Payments handled</span>
         </div>
       </div>
       <div class="strategy-hero-art">
-        <img src="assets/swim-hero.svg" alt="Swimmer illustration" loading="lazy" />
+        <img
+          src="https://cdn.pixabay.com/photo/2018/01/28/10/05/swimming-pool-3113179_1280.jpg"
+          alt="Pool facility with full lanes"
+          data-fallback="https://cdn.pixabay.com/photo/2018/01/28/10/05/swimming-pool-3113179_1280.jpg"
+          loading="lazy"
+        />
       </div>
     </section>
 
     <section class="strategy-grid">
       <div class="strategy-card">
-        <h3>Parent acquisition</h3>
-        <p>Target parents with kids 4–14 within 8km of each pool.</p>
+        <h3>Venue pain points</h3>
         <ul class="bullet-list">
-          <li>Headline: “Kids swim classes that build real confidence.”</li>
-          <li>CTA: “Book a trial lesson.”</li>
-          <li>Visual: kids swim SVG + progress badges.</li>
+          <li>Empty time slots and uneven demand.</li>
+          <li>Manual booking management and payments.</li>
+          <li>Limited marketing reach to families and clubs.</li>
         </ul>
       </div>
       <div class="strategy-card">
-        <h3>Club & school lanes</h3>
-        <p>Target coaches, club managers, and school sports coordinators.</p>
-        <ul class="bullet-list">
-          <li>Headline: “Reserve lanes for your team in minutes.”</li>
-          <li>CTA: “Request lane availability.”</li>
-          <li>Visual: club lanes + booking calendar.</li>
-        </ul>
-      </div>
-      <div class="strategy-card">
-        <h3>Adaptive & therapy</h3>
-        <p>Inclusive campaigns for adaptive swim programs.</p>
-        <ul class="bullet-list">
-          <li>Headline: “Safe, supportive swim programs for every need.”</li>
-          <li>CTA: “Speak with a coordinator.”</li>
-          <li>Visual: adaptive swim + certified staff.</li>
+        <h3>TSport solution</h3>
+        <ul class="check-list">
+          <li>Automated scheduling and capacity management.</li>
+          <li>Integrated payments, credits, and invoicing.</li>
+          <li>Marketing tools to fill lanes with qualified swimmers.</li>
         </ul>
       </div>
     </section>
 
     <section class="strategy-split">
       <div>
-        <h2>Creative samples</h2>
-        <div class="sample-grid">
-          <div class="sample-card">
-            <img src="https://pikwizard.com/pw/medium/d6efbb412facdd78074ae7df7b8eb074.jpg" alt="Kids ad" />
-            <p>“Kids Swim Foundations — enroll now.”</p>
-          </div>
-          <div class="sample-card">
-            <img src="https://pikwizard.com/pw/medium/7c74b0bd74388a6c754159a5569b98af.jpg" alt="Adult ad" />
-            <p>“Adult Stroke Clinic — 4‑week intensive.”</p>
-          </div>
-          <div class="sample-card">
-            <img src="assets/barre-2.svg" alt="Adaptive ad" />
-            <p>“Adaptive Swim Support — inclusive sessions.”</p>
-          </div>
-        </div>
+        <h2>Operational control without the admin burden</h2>
+        <p>Manage classes, instructors, and waitlists in one place while TSport handles demand and communications.</p>
+        <ul class="bullet-list">
+          <li>Real‑time utilization dashboard.</li>
+          <li>Automated reminders and re‑booking flows.</li>
+          <li>Certification badges that build trust instantly.</li>
+        </ul>
+        <button class="primary" data-action="venue-demo">See the venue dashboard</button>
       </div>
       <div class="strategy-visual">
-        <img src="assets/marketing-analytics.svg" alt="Ad reporting" loading="lazy" />
+        <img src="assets/marketing-analytics.svg" alt="Venue operations dashboard" loading="lazy" />
       </div>
+    </section>
+
+    <section class="cta">
+      <div>
+        <h2>Ready to fill your lanes this month?</h2>
+        <p>Launch with verified demand and automated operations in days.</p>
+      </div>
+      <button class="primary" data-action="start-trial">List your pool</button>
     </section>
   </main>
 
@@ -169,8 +169,25 @@
     </svg>
   </div>
 </footer>
+
+  <div class="toast" id="toast">Venue growth page loaded.</div>
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-modal-close></div>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header">
+        <h3 id="modal-title">Next step</h3>
+        <button class="ghost small" data-modal-close>Close</button>
+      </div>
+      <p id="modal-body">Choose how you would like to continue.</p>
+      <div class="modal-actions">
+        <button class="primary" data-modal-primary>Continue</button>
+        <button class="ghost" data-modal-close>Cancel</button>
+      </div>
+    </div>
+  </div>
+
   <script src="nav.js"></script>
-  <script src="resources.js" defer></script>
-  <script src="onboarding.js" defer></script>
+  <script src="app.js"></script>
+  <script src="onboarding.js"></script>
 </body>
 </html>

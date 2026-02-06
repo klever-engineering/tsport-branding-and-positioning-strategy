@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Meta Ads Kit — TSport Swim Platform</title>
-  <meta name="description" content="Facebook and Instagram ads kit for swim programs." />
+  <title>Clubs — TSport Swim Platform</title>
+  <meta name="description" content="Lane booking made simple for swim teams with block bookings and recurring billing." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="resources-page">
+<body class="strategy-page">
   <div class="page-bg"></div>
   <header class="site-header">
     <nav class="nav">
@@ -70,70 +70,70 @@
   <main class="strategy">
     <section class="strategy-hero">
       <div>
-        <p class="eyebrow">Meta Ads kit</p>
-        <h1>Facebook + Instagram campaigns built for parents and clubs.</h1>
-        <p class="sub">Plug‑and‑play campaigns with copy, creative hooks, and booking CTAs.</p>
+        <p class="eyebrow">For clubs</p>
+        <h1>Lane Booking Made Simple for Swim Teams</h1>
+        <p class="sub">Secure recurring lanes, simplify invoicing, and keep coaches focused on training.</p>
         <div class="hero-cta">
-          <a class="primary" href="legal.html#support">Request campaign files</a>
-          <a class="ghost" href="resources.html">Back to resources</a>
+          <button class="primary" data-action="schedule-demo">Book club lanes</button>
+          <button class="ghost" data-action="corporate">Talk to a club specialist</button>
+        </div>
+        <div class="trust-signals">
+          <span>Block bookings</span>
+          <span>Team management</span>
+          <span>Recurring billing</span>
         </div>
       </div>
       <div class="strategy-hero-art">
-        <img src="assets/swim-hero.svg" alt="Swimmer illustration" loading="lazy" />
+        <img
+          src="https://cdn.pixabay.com/photo/2016/08/04/20/29/swimming-1572410_1280.jpg"
+          alt="Competitive swimmers training"
+          data-fallback="https://cdn.pixabay.com/photo/2018/01/28/10/05/swimming-pool-3113179_1280.jpg"
+          loading="lazy"
+        />
       </div>
     </section>
 
     <section class="strategy-grid">
       <div class="strategy-card">
-        <h3>Parent acquisition</h3>
-        <p>Target parents with kids 4–14 within 8km of each pool.</p>
+        <h3>Club pain points</h3>
         <ul class="bullet-list">
-          <li>Headline: “Kids swim classes that build real confidence.”</li>
-          <li>CTA: “Book a trial lesson.”</li>
-          <li>Visual: kids swim SVG + progress badges.</li>
+          <li>Inconsistent lane availability and last‑minute changes.</li>
+          <li>Manual invoicing and membership tracking.</li>
+          <li>Limited visibility into seasonal demand.</li>
         </ul>
       </div>
       <div class="strategy-card">
-        <h3>Club & school lanes</h3>
-        <p>Target coaches, club managers, and school sports coordinators.</p>
-        <ul class="bullet-list">
-          <li>Headline: “Reserve lanes for your team in minutes.”</li>
-          <li>CTA: “Request lane availability.”</li>
-          <li>Visual: club lanes + booking calendar.</li>
-        </ul>
-      </div>
-      <div class="strategy-card">
-        <h3>Adaptive & therapy</h3>
-        <p>Inclusive campaigns for adaptive swim programs.</p>
-        <ul class="bullet-list">
-          <li>Headline: “Safe, supportive swim programs for every need.”</li>
-          <li>CTA: “Speak with a coordinator.”</li>
-          <li>Visual: adaptive swim + certified staff.</li>
+        <h3>TSport solution</h3>
+        <ul class="check-list">
+          <li>Block bookings with guaranteed recurring slots.</li>
+          <li>Team management tools for rosters and attendance.</li>
+          <li>Recurring billing and centralized invoicing.</li>
         </ul>
       </div>
     </section>
 
     <section class="strategy-split">
       <div>
-        <h2>Creative samples</h2>
-        <div class="sample-grid">
-          <div class="sample-card">
-            <img src="https://pikwizard.com/pw/medium/d6efbb412facdd78074ae7df7b8eb074.jpg" alt="Kids ad" />
-            <p>“Kids Swim Foundations — enroll now.”</p>
-          </div>
-          <div class="sample-card">
-            <img src="https://pikwizard.com/pw/medium/7c74b0bd74388a6c754159a5569b98af.jpg" alt="Adult ad" />
-            <p>“Adult Stroke Clinic — 4‑week intensive.”</p>
-          </div>
-          <div class="sample-card">
-            <img src="assets/barre-2.svg" alt="Adaptive ad" />
-            <p>“Adaptive Swim Support — inclusive sessions.”</p>
-          </div>
-        </div>
+        <h2>Run your team like a pro</h2>
+        <p>Coordinate coaches, squads, and lane capacity with one shared schedule.</p>
+        <ul class="bullet-list">
+          <li>Shared calendars for coaches and admins.</li>
+          <li>Priority booking windows for competition teams.</li>
+          <li>Progress tracking tied to team goals.</li>
+        </ul>
+        <button class="primary" data-action="schedule-demo">Reserve training lanes</button>
       </div>
       <div class="strategy-visual">
-        <img src="assets/marketing-analytics.svg" alt="Ad reporting" loading="lazy" />
+        <img src="assets/marketing-community.svg" alt="Club teamwork" loading="lazy" />
       </div>
+    </section>
+
+    <section class="cta">
+      <div>
+        <h2>Make lane booking predictable for your season</h2>
+        <p>Secure block bookings with recurring billing and clear reporting.</p>
+      </div>
+      <button class="primary" data-action="schedule-demo">Schedule a club demo</button>
     </section>
   </main>
 
@@ -169,8 +169,25 @@
     </svg>
   </div>
 </footer>
+
+  <div class="toast" id="toast">Club bookings loaded.</div>
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-modal-close></div>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header">
+        <h3 id="modal-title">Next step</h3>
+        <button class="ghost small" data-modal-close>Close</button>
+      </div>
+      <p id="modal-body">Choose how you would like to continue.</p>
+      <div class="modal-actions">
+        <button class="primary" data-modal-primary>Continue</button>
+        <button class="ghost" data-modal-close>Cancel</button>
+      </div>
+    </div>
+  </div>
+
   <script src="nav.js"></script>
-  <script src="resources.js" defer></script>
-  <script src="onboarding.js" defer></script>
+  <script src="app.js"></script>
+  <script src="onboarding.js"></script>
 </body>
 </html>
