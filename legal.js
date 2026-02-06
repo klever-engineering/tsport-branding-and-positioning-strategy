@@ -64,6 +64,11 @@ const actionMap = {
     title: 'Security overview',
     body: 'Review payment security, data storage, and audit logs.',
     primary: 'View overview'
+  },
+  contact: {
+    title: 'Discuss licensed imagery',
+    body: 'We will share options for licensed libraries and client-owned photo plans.',
+    primary: 'Schedule a call'
   }
 };
 
