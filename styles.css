@@ -2020,6 +2020,127 @@ main {
   text-align: left;
 }
 
+.offer-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0 20px;
+}
+
+.offer-badge {
+  background: var(--gradient-primary);
+  color: var(--white);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: var(--card-shadow);
+}
+
+.offer-badge.light {
+  background: var(--gradient-soft);
+  color: var(--mint-dark);
+  border: 1px solid rgba(12, 140, 138, 0.2);
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  overflow: hidden;
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(12, 140, 138, 0.12);
+  text-align: left;
+}
+
+.comparison-table th {
+  background: var(--gradient-soft);
+  font-weight: 600;
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.value-compare {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.value-compare strong {
+  font-size: 1.4rem;
+  display: block;
+}
+
+.value-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.value-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: var(--card-radius);
+  padding: 12px 16px;
+  box-shadow: var(--card-shadow);
+}
+
+.value-total {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding-top: 12px;
+  border-top: 1px solid rgba(12, 140, 138, 0.2);
+}
+
+.testimonial {
+  margin: 0;
+  padding: 18px 20px;
+  border-radius: var(--card-radius);
+  background: var(--gradient-soft);
+  box-shadow: var(--card-shadow);
+  font-style: italic;
+}
+
+.testimonial span {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.timeline-list {
+  display: grid;
+  gap: 10px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: var(--card-radius);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: var(--card-shadow);
+}
+
 .strategy-card h3,
 .strategy-card p {
   margin: 0;
