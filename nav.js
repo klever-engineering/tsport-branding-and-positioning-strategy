@@ -119,6 +119,8 @@
   const setActiveLink = () => {
     const links = document.querySelectorAll('.nav-dropdown a');
     links.forEach((link) => link.classList.remove('active'));
+    const offerLink = document.querySelector('.nav-cta');
+    offerLink?.classList.remove('active');
 
     let matched = false;
     links.forEach((link) => {
@@ -157,13 +159,16 @@
       'tracking.html',
       'roadmap.html',
       'timeline.html',
-      'offer.html',
       'venues.html'
     ]);
 
     const familyPages = new Set(['families.html']);
     const orgPages = new Set(['corporate.html', 'clubs.html']);
 
+    if (pathname === 'offer.html') {
+      offerLink?.classList.add('active');
+      return;
+    }
     if (venuePages.has(pathname)) return setActiveTrigger('venues');
     if (familyPages.has(pathname)) return setActiveTrigger('families');
     if (orgPages.has(pathname)) return setActiveTrigger('orgs');

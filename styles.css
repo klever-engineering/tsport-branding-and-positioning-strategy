@@ -146,6 +146,26 @@ img {
   min-width: 320px;
 }
 
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--gradient-primary);
+  color: var(--white);
+  font-weight: 600;
+  box-shadow: 0 10px 20px rgba(12, 40, 38, 0.18);
+}
+
+.nav-cta:hover {
+  filter: brightness(1.05);
+}
+
+.nav-cta.active {
+  box-shadow: 0 0 0 3px rgba(12, 140, 138, 0.25), 0 10px 24px rgba(12, 40, 38, 0.2);
+}
+
 .nav-utility {
   display: flex;
   gap: 12px;
@@ -2951,6 +2971,11 @@ main {
 
   .nav-primary {
     gap: 10px;
+  }
+
+  .nav-cta {
+    width: 100%;
+    justify-content: flex-start;
   }
 
   .premium-hero {
