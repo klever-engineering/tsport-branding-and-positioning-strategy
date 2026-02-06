@@ -3041,6 +3041,20 @@ main {
 }
 
 @media (max-width: 600px) {
+  .site-header {
+    padding: 12px 4vw 0;
+  }
+
+  .nav {
+    padding: 10px 14px;
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
   main {
     padding: 28px 6vw 60px;
     gap: 60px;
@@ -3100,8 +3114,9 @@ main {
   }
 
   .nav-utility {
-    width: 100%;
-    justify-content: flex-start;
+    width: auto;
+    justify-content: flex-end;
+    margin-left: auto;
     gap: 8px;
   }
 
