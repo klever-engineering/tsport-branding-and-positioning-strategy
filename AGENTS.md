@@ -21,6 +21,11 @@ This repository contains a static, demo-grade frontend for a premium swim bookin
 - Prefer **premium cards**, soft shadows, and rounded corners.
 - Trust indicators should look official: seals, stamps, checkmarks, ratio icons.
 - Rating displays should use star icons, not plain text.
+- Follow **Soft‑Neumorphic Editorial Minimalism**:
+  - Clean, generous layouts with clear hierarchy and white space.
+  - Subtle depth (soft shadows, layered cards), not heavy drop‑shadows.
+  - Premium typography and refined accents; gradients should feel warm and modern.
+  - Cards should feel tactile but restrained, signaling trust and sophistication.
 
 ## IA & Navigation
 - Primary nav uses dropdowns grouped by audience (Families, Venues, Organizations, About).
