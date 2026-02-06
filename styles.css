@@ -2347,6 +2347,18 @@ main {
   box-shadow: var(--card-shadow);
 }
 
+.value-meta {
+  display: grid;
+  gap: 6px;
+}
+
+.value-source {
+  font-size: 0.8rem;
+  color: var(--mint-dark);
+  text-decoration: underline;
+  width: fit-content;
+}
+
 .value-total {
   margin-top: 16px;
   display: flex;
