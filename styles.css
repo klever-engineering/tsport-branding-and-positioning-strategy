@@ -163,6 +163,33 @@ img {
   flex-wrap: wrap;
 }
 
+.nav-actions [data-tour-start] {
+  position: relative;
+  animation: tourHint 6s ease-in-out infinite;
+}
+
+.nav-actions [data-tour-start]:hover,
+.nav-actions [data-tour-start]:focus-visible {
+  animation: none;
+}
+
+@keyframes tourHint {
+  0%,
+  85%,
+  100% {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+  90% {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(12, 140, 138, 0.2);
+  }
+  95% {
+    transform: translateY(0);
+    box-shadow: 0 8px 18px rgba(12, 140, 138, 0.18);
+  }
+}
+
 .nav-dashboard {
   display: none;
 }
