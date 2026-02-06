@@ -321,10 +321,19 @@
     if (event.key === 'Escape') endTour();
   });
 
+  const getDefaultTourKey = () => {
+    if (body.classList.contains('strategy-page')) return 'strategy';
+    if (body.classList.contains('resources-page')) {
+      return body.classList.contains('resources-home') ? 'resources' : 'resourcesSub';
+    }
+    return 'home';
+  };
+
   document.querySelectorAll('[data-tour-start]').forEach((button) => {
     button.addEventListener('click', (event) => {
       event.preventDefault();
-      startTour(button.dataset.tourStart, true);
+      const key = button.dataset.tourStart || getDefaultTourKey();
+      startTour(key, true);
     });
   });
 
