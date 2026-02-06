@@ -2788,6 +2788,12 @@ main {
   color: var(--slate);
 }
 
+.timeline .ghost {
+  background: rgba(12, 140, 138, 0.1);
+  border-color: rgba(12, 140, 138, 0.45);
+  color: var(--mint-dark);
+}
+
 .timeline-badge {
   display: inline-flex;
   align-items: center;
