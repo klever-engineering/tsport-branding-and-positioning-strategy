@@ -128,6 +128,10 @@ img {
   align-items: center;
 }
 
+.nav-toggle {
+  display: none;
+}
+
 .nav-item {
   position: relative;
   padding-bottom: 12px;
@@ -2558,8 +2562,14 @@ main {
   }
 
   .nav-primary {
-    flex-wrap: wrap;
     width: 100%;
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav.nav-open .nav-primary {
+    display: flex;
   }
 
   .nav-item {
@@ -2582,9 +2592,13 @@ main {
     display: none;
   }
 
-  .nav-item:hover .nav-dropdown,
+  .nav-item.open .nav-dropdown,
   .nav-item:focus-within .nav-dropdown {
     display: grid;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
   }
 
   .discover-grid {
@@ -2646,6 +2660,10 @@ main {
   }
 
   .nav-utility .nav-search {
+    flex: 0 0 40px;
+  }
+
+  .nav-utility .nav-toggle {
     flex: 0 0 40px;
   }
 

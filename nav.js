@@ -10,6 +10,48 @@
   setCompact();
   window.addEventListener('scroll', setCompact, { passive: true });
 
+  const nav = document.querySelector('.nav');
+  const toggle = document.querySelector('.nav-toggle');
+  const primary = document.getElementById('primary-nav');
+
+  const setNavOpen = (open) => {
+    if (!nav || !toggle) return;
+    nav.classList.toggle('nav-open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  };
+
+  toggle?.addEventListener('click', (event) => {
+    event.preventDefault();
+    const isOpen = nav?.classList.contains('nav-open');
+    setNavOpen(!isOpen);
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!nav || !toggle) return;
+    if (!nav.contains(event.target)) setNavOpen(false);
+  });
+
+  const bindDropdowns = () => {
+    document.querySelectorAll('.nav-item .nav-trigger').forEach((trigger) => {
+      trigger.addEventListener('click', (event) => {
+        if (window.innerWidth > 900) return;
+        event.preventDefault();
+        const item = trigger.closest('.nav-item');
+        if (!item) return;
+        document.querySelectorAll('.nav-item.open').forEach((openItem) => {
+          if (openItem !== item) openItem.classList.remove('open');
+        });
+        item.classList.toggle('open');
+      });
+    });
+  };
+
+  bindDropdowns();
+
+  primary?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setNavOpen(false));
+  });
+
   const pathname = window.location.pathname.split('/').pop() || 'index.html';
   const hash = window.location.hash || '';
 

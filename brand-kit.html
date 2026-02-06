@@ -14,7 +14,7 @@
   <header class="site-header">
     <nav class="nav">
       <a class="logo" href="index.html">TSport Swim Platform</a>
-      <div class="nav-primary">
+      <div class="nav-primary" id="primary-nav">
         <div class="nav-item">
           <button class="nav-trigger" type="button">For Families</button>
           <div class="nav-dropdown">
@@ -48,6 +48,13 @@
         </div>
       </div>
       <div class="nav-utility">
+        <button class="icon-btn nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 7h16" fill="none" stroke="currentColor" stroke-width="2" />
+            <path d="M4 12h16" fill="none" stroke="currentColor" stroke-width="2" />
+            <path d="M4 17h16" fill="none" stroke="currentColor" stroke-width="2" />
+          </svg>
+        </button>
         <a class="ghost nav-dashboard" href="dashboard.html">Dashboard</a>
         <button class="icon-btn nav-search" type="button" data-action="search" aria-label="Search">
           <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
