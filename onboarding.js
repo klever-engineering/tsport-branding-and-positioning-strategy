@@ -114,6 +114,11 @@
         body: 'Everything you need to launch the premium swim brand, in one place.'
       },
       {
+        selector: '[data-tour="resources-ui-kit"]',
+        title: 'UI kit',
+        body: 'Design system tokens for typography, cards, buttons, icons, and gradients.'
+      },
+      {
         selector: '[data-tour="resources-brand"]',
         title: 'Brand kit',
         body: 'Visual identity, tone of voice, and premium swim aesthetics.'

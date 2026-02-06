@@ -13,6 +13,15 @@
   --lime: #c8f58e;
   --white: #ffffff;
   --shadow: 0 24px 50px rgba(12, 40, 38, 0.15);
+  --gradient-angle: 120deg;
+  --gradient-primary: linear-gradient(var(--gradient-angle), var(--mint) 0%, var(--coral) 100%);
+  --gradient-soft: linear-gradient(var(--gradient-angle), rgba(12, 140, 138, 0.2) 0%, rgba(241, 91, 122, 0.2) 100%);
+  --gradient-strong: linear-gradient(var(--gradient-angle), rgba(12, 140, 138, 0.92) 0%, rgba(241, 91, 122, 0.88) 100%);
+  --gradient-overlay: linear-gradient(var(--gradient-angle), rgba(12, 140, 138, 0.45) 0%, rgba(241, 91, 122, 0.35) 100%);
+  --gradient-overlay-soft: linear-gradient(var(--gradient-angle), rgba(12, 140, 138, 0.25) 0%, rgba(241, 91, 122, 0.18) 100%);
+  --card-radius: 12px;
+  --card-padding: 24px;
+  --card-shadow: 0 18px 36px rgba(12, 40, 38, 0.14);
 }
 
 * {
@@ -97,7 +106,7 @@ img {
   font-family: 'Fraunces', serif;
   font-size: 1.5rem;
   font-weight: 700;
-  background: linear-gradient(120deg, var(--mint), var(--coral));
+  background: var(--gradient-primary);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -156,7 +165,7 @@ img {
   bottom: -6px;
   height: 2px;
   border-radius: 999px;
-  background: linear-gradient(120deg, var(--mint), var(--coral));
+  background: var(--gradient-primary);
 }
 
 .nav-dropdown {
@@ -229,7 +238,7 @@ button:active {
 }
 
 .primary {
-  background: linear-gradient(120deg, var(--mint), var(--coral));
+  background: var(--gradient-primary);
   color: var(--white);
   padding: 12px 20px;
   border-radius: 999px;
@@ -244,17 +253,32 @@ button:active {
 }
 
 
+.secondary,
 .ghost {
-  background: rgba(255, 255, 255, 0.82);
+  background: transparent;
   color: var(--mint-dark);
   padding: 10px 18px;
   border-radius: 999px;
-  border: 1px solid rgba(12, 140, 138, 0.2);
+  border: 1px solid rgba(12, 140, 138, 0.35);
 }
 
+.secondary.small,
 .ghost.small {
   padding: 8px 14px;
   font-size: 0.85rem;
+}
+
+.tertiary {
+  background: none;
+  color: var(--mint-dark);
+  padding: 0;
+  border: none;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+a.tertiary {
+  text-decoration: underline;
 }
 
 .nav-search {
@@ -268,6 +292,16 @@ button:active {
 .nav-search svg {
   width: 20px;
   height: 20px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
 }
 
 .cta-pulse {
@@ -326,7 +360,7 @@ main {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, rgba(12, 140, 138, 0.45), rgba(241, 91, 122, 0.35));
+  background: var(--gradient-overlay);
 }
 
 .hero-banner img {
@@ -349,13 +383,13 @@ main {
 
 .profile-card {
   background: rgba(255, 255, 255, 0.95);
-  border-radius: 24px;
-  padding: 20px;
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
   display: grid;
   grid-template-columns: 90px 1fr;
   gap: 16px;
   align-items: center;
-  box-shadow: var(--shadow);
+  box-shadow: var(--card-shadow);
 }
 
 .profile-card img {
@@ -376,15 +410,15 @@ main {
 
 .credit-card {
   background: rgba(255, 255, 255, 0.9);
-  border-radius: 24px;
-  padding: 24px;
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
   display: grid;
   gap: 12px;
-  box-shadow: var(--shadow);
+  box-shadow: var(--card-shadow);
 }
 
 .credit-card.standout {
-  background: linear-gradient(130deg, rgba(12, 140, 138, 0.18), rgba(241, 91, 122, 0.2));
+  background: var(--gradient-soft);
   border: 1px solid rgba(12, 140, 138, 0.2);
 }
 
@@ -402,9 +436,9 @@ main {
 
 .sidebar {
   background: var(--white);
-  border-radius: 24px;
-  padding: 20px;
-  box-shadow: var(--shadow);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--card-shadow);
   display: grid;
   gap: 16px;
 }
@@ -437,8 +471,9 @@ main {
 
 .sidebar-card {
   background: rgba(246, 241, 234, 0.7);
-  border-radius: 16px;
-  padding: 16px;
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--card-shadow);
   display: grid;
   gap: 6px;
 }
@@ -463,9 +498,9 @@ main {
 
 .journey-card {
   background: rgba(255, 255, 255, 0.92);
-  border-radius: 22px;
-  padding: 18px;
-  box-shadow: var(--shadow);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--card-shadow);
   display: grid;
   gap: 12px;
 }
@@ -505,13 +540,13 @@ main {
 
 .family-card {
   background: rgba(255, 255, 255, 0.92);
-  border-radius: 20px;
-  padding: 16px;
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
   display: grid;
   grid-template-columns: 70px 1fr;
   gap: 12px;
   align-items: center;
-  box-shadow: var(--shadow);
+  box-shadow: var(--card-shadow);
 }
 
 .family-card img {
@@ -561,11 +596,11 @@ main {
 
 .visual-card {
   background: rgba(255, 255, 255, 0.92);
-  border-radius: 20px;
-  padding: 16px;
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
   display: grid;
   gap: 10px;
-  box-shadow: var(--shadow);
+  box-shadow: var(--card-shadow);
 }
 
 .visual-card img {
@@ -577,9 +612,9 @@ main {
 
 .stat-card {
   background: var(--white);
-  border-radius: 18px;
-  padding: 16px;
-  box-shadow: var(--shadow);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--card-shadow);
 }
 
 .status-banner {
@@ -631,10 +666,10 @@ main {
 
 .course-card {
   background: var(--white);
-  border-radius: 20px;
+  border-radius: var(--card-radius);
   overflow: hidden;
   display: grid;
-  box-shadow: var(--shadow);
+  box-shadow: var(--card-shadow);
 }
 
 .course-card img {
@@ -644,7 +679,7 @@ main {
 }
 
 .course-card div {
-  padding: 16px;
+  padding: var(--card-padding);
   display: grid;
   gap: 10px;
 }
@@ -682,8 +717,8 @@ main {
 }
 
 .premium-hero {
-  background: linear-gradient(130deg, rgba(12, 140, 138, 0.2), rgba(241, 91, 122, 0.22));
-  border-radius: 32px;
+  background: var(--gradient-soft);
+  border-radius: 24px;
   padding: 32px;
   box-shadow: var(--shadow);
 }
@@ -735,9 +770,9 @@ main {
 
 .hero-card {
   background: rgba(255, 255, 255, 0.9);
-  border-radius: 24px;
-  padding: 24px;
-  box-shadow: var(--shadow);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--card-shadow);
   display: grid;
   gap: 18px;
 }
@@ -759,7 +794,7 @@ main {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(140deg, rgba(12, 140, 138, 0.18), rgba(241, 91, 122, 0.22));
+  background: var(--gradient-overlay-soft);
 }
 
 .hero-illustrations img {
@@ -823,9 +858,9 @@ main {
 
 .search-card {
   background: var(--white);
-  border-radius: 24px;
-  padding: 20px;
-  box-shadow: var(--shadow);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--card-shadow);
   display: grid;
   gap: 16px;
 }
@@ -907,13 +942,13 @@ main {
 
 .program-card {
   background: rgba(255, 255, 255, 0.92);
-  border-radius: 22px;
-  padding: 16px;
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
   display: grid;
   grid-template-columns: 90px 1fr;
   gap: 14px;
   align-items: center;
-  box-shadow: var(--shadow);
+  box-shadow: var(--card-shadow);
 }
 
 .program-card img {
@@ -936,9 +971,9 @@ main {
 
 .mission-card {
   background: rgba(255, 255, 255, 0.92);
-  border-radius: 20px;
-  padding: 16px;
-  box-shadow: var(--shadow);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--card-shadow);
 }
 
 .contact {
@@ -948,9 +983,9 @@ main {
 
 .contact-card {
   background: rgba(255, 255, 255, 0.92);
-  border-radius: 22px;
-  padding: 18px;
-  box-shadow: var(--shadow);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--card-shadow);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -971,9 +1006,9 @@ main {
 
 .stakeholder-card {
   background: rgba(255, 255, 255, 0.92);
-  border-radius: 24px;
-  padding: 20px;
-  box-shadow: var(--shadow);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--card-shadow);
   display: grid;
   gap: 12px;
   position: relative;
@@ -988,7 +1023,7 @@ main {
   left: 0;
   right: 0;
   height: 6px;
-  background: var(--accent, linear-gradient(120deg, var(--mint), var(--coral)));
+  background: var(--accent, linear-gradient(var(--gradient-angle), var(--mint), var(--coral)));
 }
 
 .stakeholder-icon {
@@ -1018,25 +1053,30 @@ main {
 }
 
 .accent-mint {
-  --accent: linear-gradient(120deg, var(--mint), var(--lime));
+  --accent: linear-gradient(var(--gradient-angle), var(--mint), var(--lime));
 }
 
 .accent-coral {
-  --accent: linear-gradient(120deg, var(--coral), #ff8aa4);
+  --accent: linear-gradient(var(--gradient-angle), var(--coral), #ff8aa4);
 }
 
 .accent-sky {
-  --accent: linear-gradient(120deg, #22d3ee, var(--mint));
+  --accent: linear-gradient(var(--gradient-angle), #22d3ee, var(--mint));
 }
 
 .accent-lime {
-  --accent: linear-gradient(120deg, var(--lime), #fef08a);
+  --accent: linear-gradient(var(--gradient-angle), var(--lime), #fef08a);
 }
 
 .section-title h2 {
   font-family: 'Fraunces', serif;
-  font-size: 2rem;
+  font-size: 36px;
   margin-bottom: 8px;
+}
+
+.section-title h3 {
+  font-size: 24px;
+  margin: 0 0 8px;
 }
 
 .section-title p {
@@ -1094,7 +1134,7 @@ main {
 }
 
 .pill.active {
-  background: linear-gradient(120deg, var(--mint), var(--coral));
+  background: var(--gradient-primary);
   color: var(--white);
 }
 
@@ -1144,9 +1184,9 @@ main {
 
 .card {
   background: var(--white);
-  border-radius: 20px;
+  border-radius: var(--card-radius);
   overflow: hidden;
-  box-shadow: var(--shadow);
+  box-shadow: var(--card-shadow);
   display: flex;
   flex-direction: column;
   animation: rise 0.8s ease both;
@@ -1168,7 +1208,7 @@ main {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(130deg, rgba(12, 140, 138, 0.25), rgba(241, 91, 122, 0.18));
+  background: var(--gradient-overlay-soft);
   pointer-events: none;
   z-index: 1;
 }
@@ -1282,7 +1322,7 @@ main {
   top: 50%;
   width: 36px;
   height: 3px;
-  background: linear-gradient(120deg, var(--mint), var(--coral));
+  background: var(--gradient-primary);
   transform: translateY(-50%);
   border-radius: 999px;
 }
@@ -1307,13 +1347,13 @@ main {
 
 .trust-card {
   background: rgba(255, 255, 255, 0.9);
-  border-radius: 22px;
-  padding: 16px;
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
   display: grid;
   gap: 8px;
   text-align: center;
   border: 1px solid rgba(12, 140, 138, 0.12);
-  box-shadow: 0 12px 24px rgba(12, 40, 38, 0.12);
+  box-shadow: var(--card-shadow);
 }
 
 .trust-card img {
@@ -1336,7 +1376,7 @@ main {
 .partner-pill {
   padding: 8px 14px;
   border-radius: 999px;
-  background: linear-gradient(120deg, rgba(12, 140, 138, 0.12), rgba(241, 91, 122, 0.14));
+  background: var(--gradient-soft);
   border: 1px solid rgba(12, 140, 138, 0.2);
   font-size: 0.85rem;
   font-weight: 600;
@@ -1344,7 +1384,7 @@ main {
 }
 
 .card-body {
-  padding: 16px;
+  padding: var(--card-padding);
   display: grid;
   gap: 8px;
   flex: 1;
@@ -1394,7 +1434,7 @@ main {
 }
 
 .booking-cta {
-  background: linear-gradient(120deg, rgba(12, 140, 138, 0.92), rgba(241, 91, 122, 0.88));
+  background: var(--gradient-strong);
   color: var(--white);
   border-radius: 22px;
   padding: 20px 24px;
@@ -1469,7 +1509,7 @@ main {
 }
 
 .tab.active {
-  background: linear-gradient(120deg, var(--mint), var(--coral));
+  background: var(--gradient-primary);
   color: var(--white);
 }
 
@@ -1500,9 +1540,9 @@ main {
 
 .premium-card {
   background: rgba(255, 255, 255, 0.92);
-  border-radius: 22px;
-  padding: 18px;
-  box-shadow: var(--shadow);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--card-shadow);
   display: grid;
   gap: 12px;
 }
@@ -1513,7 +1553,7 @@ main {
   gap: 8px;
   padding: 8px 14px;
   border-radius: 999px;
-  background: linear-gradient(120deg, rgba(12, 140, 138, 0.15), rgba(241, 91, 122, 0.12));
+  background: var(--gradient-soft);
   font-weight: 600;
   color: var(--mint-dark);
 }
@@ -1524,7 +1564,7 @@ main {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background: linear-gradient(120deg, var(--mint), var(--coral));
+  background: var(--gradient-primary);
   color: var(--white);
   font-size: 0.85rem;
 }
@@ -1605,9 +1645,9 @@ main {
   gap: 12px;
   align-items: center;
   background: rgba(255, 255, 255, 0.85);
-  border-radius: 18px;
-  padding: 10px;
-  box-shadow: 0 10px 18px rgba(12, 40, 38, 0.12);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--card-shadow);
 }
 
 .instructor-card img {
@@ -1663,7 +1703,7 @@ main {
 }
 
 .progress-step.active {
-  background: linear-gradient(120deg, rgba(12, 140, 138, 0.18), rgba(241, 91, 122, 0.14));
+  background: linear-gradient(var(--gradient-angle), rgba(12, 140, 138, 0.18), rgba(241, 91, 122, 0.14));
   border-color: rgba(12, 140, 138, 0.35);
 }
 
@@ -1745,8 +1785,9 @@ main {
 
 .price-card {
   background: var(--white);
-  padding: 16px;
-  border-radius: 14px;
+  padding: var(--card-padding);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
 }
 
 .benefits {
@@ -1757,9 +1798,9 @@ main {
 
 .benefit-card {
   background: rgba(255, 255, 255, 0.8);
-  padding: 24px;
-  border-radius: 20px;
-  box-shadow: var(--shadow);
+  padding: var(--card-padding);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
 }
 
 .benefit-card ul {
@@ -1775,9 +1816,11 @@ main {
 
 .corp-card {
   background: var(--white);
-  padding: 20px;
-  border-radius: 18px;
+  padding: var(--card-padding);
+  border-radius: var(--card-radius);
   border: 1px solid rgba(28, 31, 36, 0.08);
+
+  box-shadow: var(--card-shadow);
 }
 
 .pricing .price-grid {
@@ -1786,9 +1829,9 @@ main {
 
 .price-tier {
   background: var(--white);
-  padding: 24px;
-  border-radius: 20px;
-  box-shadow: var(--shadow);
+  padding: var(--card-padding);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
   display: grid;
   gap: 12px;
 }
@@ -1815,7 +1858,7 @@ main {
 }
 
 .cta {
-  background: linear-gradient(120deg, rgba(15, 111, 97, 0.9), rgba(242, 153, 74, 0.85));
+  background: linear-gradient(var(--gradient-angle), rgba(15, 111, 97, 0.9), rgba(242, 153, 74, 0.85));
   padding: 32px;
   border-radius: 28px;
   color: var(--white);
@@ -1876,7 +1919,7 @@ main {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: linear-gradient(120deg, var(--mint), var(--coral));
+  background: var(--gradient-primary);
   box-shadow: 0 6px 12px rgba(12, 140, 138, 0.3);
 }
 
@@ -1920,12 +1963,16 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 32px;
   align-items: center;
+  background: var(--gradient-soft);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: var(--shadow);
 }
 
 .strategy-hero-art img {
   width: 100%;
-  border-radius: 26px;
-  box-shadow: var(--shadow);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
 }
 
 .strategy-grid {
@@ -1936,9 +1983,9 @@ main {
 
 .strategy-card {
   background: rgba(255, 255, 255, 0.9);
-  border-radius: 22px;
-  padding: 22px;
-  box-shadow: var(--shadow);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--card-shadow);
   display: grid;
   gap: 12px;
   align-content: start;
@@ -2018,11 +2065,11 @@ main {
 
 .sample-card {
   background: rgba(255, 255, 255, 0.85);
-  border-radius: 18px;
-  padding: 12px;
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
   display: grid;
   gap: 8px;
-  box-shadow: var(--shadow);
+  box-shadow: var(--card-shadow);
 }
 
 .sample-card img {
@@ -2061,9 +2108,9 @@ main {
 
 .proof-card {
   background: rgba(255, 255, 255, 0.92);
-  border-radius: 16px;
-  padding: 12px;
-  box-shadow: var(--shadow);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--card-shadow);
   display: grid;
   gap: 4px;
 }
@@ -2081,8 +2128,10 @@ main {
 
 .message-card {
   background: rgba(12, 140, 138, 0.08);
-  border-radius: 16px;
-  padding: 12px;
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+
+  box-shadow: var(--card-shadow);
 }
 
 .message-card p {
@@ -2098,11 +2147,11 @@ main {
 
 .visual-grid .visual-card {
   background: rgba(255, 255, 255, 0.92);
-  border-radius: 18px;
-  padding: 12px;
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
   display: grid;
   gap: 8px;
-  box-shadow: var(--shadow);
+  box-shadow: var(--card-shadow);
   text-align: center;
 }
 
@@ -2119,11 +2168,11 @@ main {
 
 .chart-card {
   background: rgba(255, 255, 255, 0.92);
-  border-radius: 18px;
-  padding: 14px;
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
   display: grid;
   gap: 12px;
-  box-shadow: var(--shadow);
+  box-shadow: var(--card-shadow);
 }
 
 .chart-header {
@@ -2152,7 +2201,7 @@ main {
   content: '';
   height: 10px;
   border-radius: 999px;
-  background: linear-gradient(120deg, var(--mint), var(--coral));
+  background: var(--gradient-primary);
   width: var(--value);
   box-shadow: 0 6px 12px rgba(12, 140, 138, 0.2);
   grid-column: 1 / span 1;
@@ -2252,9 +2301,9 @@ main {
 
 .kpi-card {
   background: rgba(255, 255, 255, 0.92);
-  border-radius: 16px;
-  padding: 12px;
-  box-shadow: var(--shadow);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--card-shadow);
   display: grid;
   gap: 4px;
 }
@@ -2318,9 +2367,9 @@ main {
 
 .calendar-card {
   background: rgba(255, 255, 255, 0.92);
-  border-radius: 22px;
-  padding: 16px;
-  box-shadow: var(--shadow);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--card-shadow);
 }
 
 .calendar-header {
@@ -2352,7 +2401,7 @@ main {
 }
 
 .calendar-cell.active {
-  background: linear-gradient(120deg, var(--mint), var(--coral));
+  background: var(--gradient-primary);
   color: var(--white);
   font-weight: 600;
 }
