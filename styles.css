@@ -2645,6 +2645,113 @@ main {
   border-top: 1px solid rgba(12, 140, 138, 0.2);
 }
 
+.roi-section {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 28px;
+  padding: 32px;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 20px;
+}
+
+.roi-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.roi-inputs {
+  display: grid;
+  gap: 16px;
+}
+
+.slider-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-weight: 600;
+}
+
+.roi-value {
+  font-weight: 700;
+  color: var(--mint-dark);
+}
+
+.roi-inputs input[type="range"] {
+  width: 100%;
+  accent-color: var(--mint);
+}
+
+.roi-output {
+  display: grid;
+  gap: 12px;
+  background: var(--gradient-soft);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: var(--card-shadow);
+}
+
+.roi-summary {
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.roi-highlight {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--mint-dark);
+}
+
+.roi-projection {
+  color: var(--muted);
+}
+
+.roi-goal {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.roi-timeline {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.roi-month {
+  height: 18px;
+  border-radius: 999px;
+  background: rgba(12, 140, 138, 0.12);
+  position: relative;
+}
+
+.roi-month span {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.65rem;
+  color: var(--muted);
+}
+
+.roi-month.active {
+  background: var(--gradient-primary);
+}
+
+.roi-month.goal::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f15b7a;
+  box-shadow: 0 0 0 4px rgba(241, 91, 122, 0.2);
+}
+
 .testimonial {
   margin: 0;
   padding: 18px 20px;

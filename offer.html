@@ -257,6 +257,60 @@
       </div>
     </section>
 
+    <section class="roi-section">
+      <div class="section-title">
+        <h2>Estimate your return on investment</h2>
+        <p>Adjust the levers below to see how the TSport Swim offer pays back and scales.</p>
+      </div>
+      <div class="roi-card">
+        <div class="roi-inputs">
+          <label class="slider-field" for="roi-price">
+            Average class price
+            <span class="roi-value" id="roi-price-value">€20</span>
+          </label>
+          <input id="roi-price" type="range" min="10" max="60" step="1" value="20" />
+
+          <label class="slider-field" for="roi-bookings">
+            Expected weekly bookings
+            <span class="roi-value" id="roi-bookings-value">50</span>
+          </label>
+          <input id="roi-bookings" type="range" min="10" max="200" step="5" value="50" />
+
+          <label class="slider-field" for="roi-goal">
+            Months to break even goal
+            <span class="roi-value" id="roi-goal-value">3</span>
+          </label>
+          <input id="roi-goal" type="range" min="1" max="12" step="1" value="3" />
+        </div>
+        <div class="roi-output">
+          <div class="roi-summary" id="roi-summary">
+            At 50 bookings/week × €20 = €1,000/week = €4,000/month
+          </div>
+          <div class="roi-highlight" id="roi-breakeven">
+            Your €5,000 investment breaks even in month 2
+          </div>
+          <div class="roi-projection" id="roi-projection">
+            Projected 12-month revenue: €48,000
+          </div>
+          <div class="roi-goal">Goal: month <span id="roi-goal-display">3</span></div>
+          <div class="roi-timeline" id="roi-timeline" aria-label="Investment payback timeline">
+            <div class="roi-month" data-month="1"><span>1</span></div>
+            <div class="roi-month" data-month="2"><span>2</span></div>
+            <div class="roi-month" data-month="3"><span>3</span></div>
+            <div class="roi-month" data-month="4"><span>4</span></div>
+            <div class="roi-month" data-month="5"><span>5</span></div>
+            <div class="roi-month" data-month="6"><span>6</span></div>
+            <div class="roi-month" data-month="7"><span>7</span></div>
+            <div class="roi-month" data-month="8"><span>8</span></div>
+            <div class="roi-month" data-month="9"><span>9</span></div>
+            <div class="roi-month" data-month="10"><span>10</span></div>
+            <div class="roi-month" data-month="11"><span>11</span></div>
+            <div class="roi-month" data-month="12"><span>12</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="strategy-grid">
       <div class="strategy-card">
         <h3>How swim organizations launched their marketplace</h3>
