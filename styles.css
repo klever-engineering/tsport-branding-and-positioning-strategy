@@ -2360,6 +2360,16 @@ main {
   color: var(--ink);
 }
 
+.credit-link {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.credit-link:hover {
+  text-decoration: underline;
+}
+
 .credit-mark {
   width: 12px;
   height: 12px;
