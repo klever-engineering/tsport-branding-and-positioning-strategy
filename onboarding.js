@@ -328,15 +328,5 @@
     });
   });
 
-  let pageKey = 'home';
-  if (body.classList.contains('strategy-page')) pageKey = 'strategy';
-  if (body.classList.contains('resources-home')) pageKey = 'resources';
-  if (body.classList.contains('resources-page') && !body.classList.contains('resources-home')) {
-    pageKey = 'resourcesSub';
-  }
-  const autoKey = `tourAuto:${pageKey}`;
-  if (!sessionStorage.getItem(autoKey)) {
-    sessionStorage.setItem(autoKey, '1');
-    setTimeout(() => startTour(pageKey), 800);
-  }
+  // Auto-start disabled; tours launch only when the user clicks "Take a tour".
 })();

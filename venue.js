@@ -95,7 +95,7 @@ const renderVenue = (venue) => {
   if (hero) {
     hero.src = venue.heroImage;
     hero.alt = venue.name;
-    hero.dataset.fallback = venue.fallbackImage || 'assets/hero-studio.svg';
+    hero.dataset.fallback = venue.fallbackImage || 'https://cdn.pixabay.com/photo/2018/01/28/10/05/swimming-pool-3113179_1280.jpg';
   }
   fillEmbed('[data-venue-map]', venue.mapEmbed, `Map for ${venue.name}`);
 

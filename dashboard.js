@@ -59,9 +59,9 @@ const addBooking = (title) => {
   item.className = 'booking-item';
   item.innerHTML = `
     <img
-      src="assets/swim.svg"
+      src="https://cdn.pixabay.com/photo/2016/11/22/19/21/child-1850153_640.jpg"
       alt="Class"
-      data-fallback="assets/hero-studio.svg"
+      data-fallback="https://cdn.pixabay.com/photo/2018/01/28/10/05/swimming-pool-3113179_1280.jpg"
     />
     <div>
       <h4>${title}</h4>

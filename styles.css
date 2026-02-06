@@ -296,12 +296,25 @@ main {
   gap: 80px;
 }
 
+.hero-banner {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.hero-banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(12, 140, 138, 0.45), rgba(241, 91, 122, 0.35));
+}
+
 .hero-banner img {
   width: 100%;
   height: clamp(220px, 40vw, 380px);
   object-fit: cover;
-  border-radius: 28px;
-  box-shadow: var(--shadow);
+  display: block;
 }
 
 .dashboard {
@@ -716,11 +729,25 @@ main {
   gap: 10px;
 }
 
+.hero-illustrations .photo-frame {
+  position: relative;
+  height: 140px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.hero-illustrations .photo-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(140deg, rgba(12, 140, 138, 0.18), rgba(241, 91, 122, 0.22));
+}
+
 .hero-illustrations img {
   width: 100%;
-  height: 140px;
+  height: 100%;
   object-fit: cover;
-  border-radius: 18px;
+  display: block;
 }
 
 .hero-copy h1 {
@@ -1106,10 +1133,21 @@ main {
   width: 100%;
   height: 180px;
   object-fit: cover;
+  position: relative;
+  z-index: 0;
 }
 
 .card-media {
   position: relative;
+}
+
+.card-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(130deg, rgba(12, 140, 138, 0.25), rgba(241, 91, 122, 0.18));
+  pointer-events: none;
+  z-index: 1;
 }
 
 .verified-stamp {
@@ -1127,6 +1165,7 @@ main {
   text-transform: uppercase;
   box-shadow: 0 10px 20px rgba(12, 40, 38, 0.18);
   backdrop-filter: blur(4px);
+  z-index: 2;
 }
 
 .verified-stamp.large {

@@ -7,8 +7,8 @@
     "activity": "Kids Swim",
     "rating": 4.9,
     "reviewCount": 210,
-    "image": "assets/yoga.svg",
-    "heroImage": "assets/yoga.svg",
+    "image": "https://pikwizard.com/pw/medium/57328f8680f5757b863a4844fb54fc64.jpg",
+    "heroImage": "https://pikwizard.com/pw/medium/57328f8680f5757b863a4844fb54fc64.jpg",
     "mapEmbed": "https://www.openstreetmap.org/export/embed.html?bbox=13.3600%2C52.5000%2C13.4500%2C52.5400&layer=mapnik&marker=52.5200%2C13.4050",
     "time": "morning",
     "mode": "indoor",
@@ -68,12 +68,12 @@
       }
     ],
     "gallery": [
-      "assets/yoga.svg",
-      "assets/yoga-2.svg",
-      "assets/pilates.svg",
-      "assets/barre.svg"
+      "https://pikwizard.com/pw/medium/57328f8680f5757b863a4844fb54fc64.jpg",
+      "https://pikwizard.com/pw/medium/d6efbb412facdd78074ae7df7b8eb074.jpg",
+      "https://pikwizard.com/pw/medium/7c74b0bd74388a6c754159a5569b98af.jpg",
+      "https://cdn.pixabay.com/photo/2016/11/22/19/21/child-1850153_640.jpg"
     ],
-    "fallbackImage": "assets/yoga.svg"
+    "fallbackImage": "https://pikwizard.com/pw/medium/57328f8680f5757b863a4844fb54fc64.jpg"
   },
   {
     "id": "iron-harbor",
@@ -83,8 +83,8 @@
     "activity": "Adult Swim",
     "rating": 4.7,
     "reviewCount": 156,
-    "image": "assets/boxing.svg",
-    "heroImage": "assets/boxing.svg",
+    "image": "https://pikwizard.com/pw/medium/d6efbb412facdd78074ae7df7b8eb074.jpg",
+    "heroImage": "https://pikwizard.com/pw/medium/d6efbb412facdd78074ae7df7b8eb074.jpg",
     "mapEmbed": "https://www.openstreetmap.org/export/embed.html?bbox=13.3600%2C52.5000%2C13.4500%2C52.5400&layer=mapnik&marker=52.5200%2C13.4050",
     "time": "evening",
     "mode": "indoor",
@@ -142,12 +142,12 @@
       }
     ],
     "gallery": [
-      "assets/boxing.svg",
-      "assets/boxing-2.svg",
-      "assets/hiit.svg",
-      "assets/class.svg"
+      "https://pikwizard.com/pw/medium/d6efbb412facdd78074ae7df7b8eb074.jpg",
+      "https://pikwizard.com/pw/medium/7c74b0bd74388a6c754159a5569b98af.jpg",
+      "https://cdn.pixabay.com/photo/2016/11/22/19/21/child-1850153_640.jpg",
+      "https://cdn.pixabay.com/photo/2018/01/28/10/05/swimming-pool-3113179_1280.jpg"
     ],
-    "fallbackImage": "assets/boxing.svg"
+    "fallbackImage": "https://pikwizard.com/pw/medium/d6efbb412facdd78074ae7df7b8eb074.jpg"
   },
   {
     "id": "skyline-ride",
@@ -157,8 +157,8 @@
     "activity": "Club Lanes",
     "rating": 4.6,
     "reviewCount": 98,
-    "image": "assets/cycling.svg",
-    "heroImage": "assets/cycling.svg",
+    "image": "https://cdn.pixabay.com/photo/2018/01/28/10/05/swimming-pool-3113179_1280.jpg",
+    "heroImage": "https://cdn.pixabay.com/photo/2018/01/28/10/05/swimming-pool-3113179_1280.jpg",
     "mapEmbed": "https://www.openstreetmap.org/export/embed.html?bbox=9.9500%2C53.5300%2C10.0300%2C53.5700&layer=mapnik&marker=53.5511%2C9.9937",
     "time": "afternoon",
     "mode": "indoor",
@@ -208,12 +208,12 @@
       }
     ],
     "gallery": [
-      "assets/cycling.svg",
-      "assets/cycling-2.svg",
-      "assets/hiit-2.svg",
-      "assets/class.svg"
+      "https://cdn.pixabay.com/photo/2018/01/28/10/05/swimming-pool-3113179_1280.jpg",
+      "https://pikwizard.com/pw/medium/d6efbb412facdd78074ae7df7b8eb074.jpg",
+      "https://cdn.pixabay.com/photo/2016/11/22/19/21/child-1850153_640.jpg",
+      "https://pikwizard.com/pw/medium/57328f8680f5757b863a4844fb54fc64.jpg"
     ],
-    "fallbackImage": "assets/cycling.svg"
+    "fallbackImage": "https://cdn.pixabay.com/photo/2018/01/28/10/05/swimming-pool-3113179_1280.jpg"
   },
   {
     "id": "harbor-barre",
@@ -223,8 +223,8 @@
     "activity": "Aqua Therapy",
     "rating": 4.8,
     "reviewCount": 132,
-    "image": "assets/barre.svg",
-    "heroImage": "assets/barre.svg",
+    "image": "https://cdn.pixabay.com/photo/2016/11/22/19/21/child-1850153_640.jpg",
+    "heroImage": "https://cdn.pixabay.com/photo/2016/11/22/19/21/child-1850153_640.jpg",
     "mapEmbed": "https://www.openstreetmap.org/export/embed.html?bbox=5.8000%2C47.2000%2C15.0000%2C55.1000&layer=mapnik&marker=51.1657%2C10.4515",
     "time": "morning",
     "mode": "online",
@@ -274,12 +274,12 @@
       }
     ],
     "gallery": [
-      "assets/barre.svg",
-      "assets/barre-2.svg",
-      "assets/yoga.svg",
-      "assets/pilates-2.svg"
+      "https://cdn.pixabay.com/photo/2016/11/22/19/21/child-1850153_640.jpg",
+      "https://pikwizard.com/pw/medium/d6efbb412facdd78074ae7df7b8eb074.jpg",
+      "https://pikwizard.com/pw/medium/7c74b0bd74388a6c754159a5569b98af.jpg",
+      "https://cdn.pixabay.com/photo/2018/01/28/10/05/swimming-pool-3113179_1280.jpg"
     ],
-    "fallbackImage": "assets/barre.svg"
+    "fallbackImage": "https://cdn.pixabay.com/photo/2016/11/22/19/21/child-1850153_640.jpg"
   },
   {
     "id": "pulse-district",
@@ -289,8 +289,8 @@
     "activity": "Open Water",
     "rating": 4.5,
     "reviewCount": 84,
-    "image": "assets/hiit.svg",
-    "heroImage": "assets/hiit.svg",
+    "image": "https://pikwizard.com/pw/medium/7c74b0bd74388a6c754159a5569b98af.jpg",
+    "heroImage": "https://pikwizard.com/pw/medium/7c74b0bd74388a6c754159a5569b98af.jpg",
     "mapEmbed": "https://www.openstreetmap.org/export/embed.html?bbox=11.5400%2C48.1200%2C11.6200%2C48.1500&layer=mapnik&marker=48.1351%2C11.5820",
     "time": "evening",
     "mode": "outdoor",
@@ -340,12 +340,12 @@
       }
     ],
     "gallery": [
-      "assets/hiit.svg",
-      "assets/hiit-2.svg",
-      "assets/boxing.svg",
-      "assets/class.svg"
+      "https://pikwizard.com/pw/medium/7c74b0bd74388a6c754159a5569b98af.jpg",
+      "https://cdn.pixabay.com/photo/2016/11/22/19/21/child-1850153_640.jpg",
+      "https://pikwizard.com/pw/medium/d6efbb412facdd78074ae7df7b8eb074.jpg",
+      "https://pikwizard.com/pw/medium/57328f8680f5757b863a4844fb54fc64.jpg"
     ],
-    "fallbackImage": "assets/hiit.svg"
+    "fallbackImage": "https://pikwizard.com/pw/medium/7c74b0bd74388a6c754159a5569b98af.jpg"
   },
   {
     "id": "align-pilates",
@@ -355,8 +355,8 @@
     "activity": "Adaptive Swim",
     "rating": 4.9,
     "reviewCount": 188,
-    "image": "assets/pilates.svg",
-    "heroImage": "assets/pilates.svg",
+    "image": "https://pikwizard.com/pw/medium/d6efbb412facdd78074ae7df7b8eb074.jpg",
+    "heroImage": "https://pikwizard.com/pw/medium/d6efbb412facdd78074ae7df7b8eb074.jpg",
     "mapEmbed": "https://www.openstreetmap.org/export/embed.html?bbox=13.3600%2C52.5000%2C13.4500%2C52.5400&layer=mapnik&marker=52.5200%2C13.4050",
     "time": "afternoon",
     "mode": "indoor",
@@ -405,11 +405,11 @@
       }
     ],
     "gallery": [
-      "assets/pilates.svg",
-      "assets/pilates-2.svg",
-      "assets/yoga-2.svg",
-      "assets/barre.svg"
+      "https://pikwizard.com/pw/medium/d6efbb412facdd78074ae7df7b8eb074.jpg",
+      "https://pikwizard.com/pw/medium/7c74b0bd74388a6c754159a5569b98af.jpg",
+      "https://cdn.pixabay.com/photo/2016/11/22/19/21/child-1850153_640.jpg",
+      "https://pikwizard.com/pw/medium/57328f8680f5757b863a4844fb54fc64.jpg"
     ],
-    "fallbackImage": "assets/pilates.svg"
+    "fallbackImage": "https://pikwizard.com/pw/medium/d6efbb412facdd78074ae7df7b8eb074.jpg"
   }
 ]
