@@ -22,6 +22,7 @@ const filters = {
 };
 
 let venues = [];
+let renderToken = 0;
 
 const showToast = (message) => {
   if (!toast) return;
@@ -66,6 +67,20 @@ const applyFallbacks = (root = document) => {
       if (img.dataset.fallbackApplied) return;
       img.dataset.fallbackApplied = 'true';
       img.src = img.dataset.fallback;
+    });
+  });
+};
+
+const bindFavButtons = (root = venueContainer || document) => {
+  root?.querySelectorAll('[data-fav]').forEach((btn) => {
+    if (btn.dataset.bound) return;
+    btn.dataset.bound = 'true';
+    btn.addEventListener('click', () => {
+      const isSaved = btn.textContent === '♡';
+      btn.textContent = isSaved ? '♥' : '♡';
+      btn.setAttribute('aria-pressed', isSaved ? 'true' : 'false');
+      btn.setAttribute('aria-label', isSaved ? 'Remove saved venue' : 'Save venue');
+      btn.style.background = isSaved ? 'rgba(242, 153, 74, 0.2)' : 'rgba(191, 225, 218, 0.4)';
     });
   });
 };
@@ -286,25 +301,52 @@ const cardTemplate = (venue) => `
 const renderCards = () => {
   if (!venueContainer) return;
   const filtered = venues.filter(matchesFilters);
-  venueContainer.innerHTML = filtered.map(cardTemplate).join('');
+  const token = ++renderToken;
+  const skeletonCount = Math.min(6, Math.max(filtered.length, 3));
+
+  venueContainer.innerHTML = new Array(skeletonCount)
+    .fill(0)
+    .map(
+      () => `
+        <div class="skeleton-card">
+          <div class="skeleton-image"></div>
+          <div class="skeleton-line medium"></div>
+          <div class="skeleton-line"></div>
+          <div class="skeleton-line short"></div>
+        </div>
+      `
+    )
+    .join('');
+
   resultCount.textContent = filtered.length;
 
   if (emptyState) {
     emptyState.classList.toggle('show', filtered.length === 0);
   }
 
-  const favButtons = venueContainer.querySelectorAll('[data-fav]');
-  favButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const isSaved = btn.textContent === '♡';
-      btn.textContent = isSaved ? '♥' : '♡';
-      btn.setAttribute('aria-pressed', isSaved ? 'true' : 'false');
-      btn.setAttribute('aria-label', isSaved ? 'Remove saved venue' : 'Save venue');
-      btn.style.background = isSaved ? 'rgba(242, 153, 74, 0.2)' : 'rgba(191, 225, 218, 0.4)';
-    });
-  });
+  if (filtered.length === 0) {
+    venueContainer.innerHTML = '';
+    return;
+  }
 
-  applyFallbacks(venueContainer);
+  const chunkSize = 6;
+  let index = 0;
+
+  const renderChunk = () => {
+    if (token !== renderToken) return;
+    if (index === 0) venueContainer.innerHTML = '';
+    const slice = filtered.slice(index, index + chunkSize);
+    if (!slice.length) return;
+    venueContainer.insertAdjacentHTML('beforeend', slice.map(cardTemplate).join(''));
+    applyFallbacks(venueContainer);
+    bindFavButtons(venueContainer);
+    index += chunkSize;
+    if (index < filtered.length) {
+      setTimeout(renderChunk, 120);
+    }
+  };
+
+  setTimeout(renderChunk, 180);
 };
 
 const updateChips = () => {
@@ -427,6 +469,7 @@ venueSaveBtn?.addEventListener('click', () => {
 });
 
 applyFallbacks();
+bindFavButtons();
 
 const enrichVenue = (venue) => {
   return {

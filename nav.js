@@ -200,4 +200,30 @@
       }
     });
   });
+
+  const enhanceImages = () => {
+    const images = document.querySelectorAll('img');
+    if (!images.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -10% 0px' }
+    );
+
+    images.forEach((img) => {
+      if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
+      img.setAttribute('decoding', 'async');
+      img.classList.add('fade-in');
+      observer.observe(img);
+    });
+  };
+
+  enhanceImages();
 })();
