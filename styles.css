@@ -2864,6 +2864,7 @@ main {
   .nav {
     flex-direction: column;
     align-items: flex-start;
+    gap: 12px;
   }
 
   .nav-primary {
@@ -2881,13 +2882,28 @@ main {
     display: flex;
   }
 
+  .nav-utility-panel {
+    gap: 6px;
+    margin-top: 4px;
+  }
+
+  .nav-utility-label {
+    font-size: 0.7rem;
+  }
+
+  .nav-utility-item {
+    padding: 10px 14px;
+  }
+
   .nav-item {
     width: 100%;
+    padding-bottom: 6px;
   }
 
   .nav-trigger {
     width: 100%;
     text-align: left;
+    padding: 10px 12px;
   }
 
   .nav-dropdown {
@@ -2898,8 +2914,9 @@ main {
     pointer-events: auto;
     box-shadow: none;
     background: transparent;
-    padding: 0;
+    padding: 0 0 0 6px;
     display: none;
+    gap: 4px;
   }
 
   .nav-item.open .nav-dropdown,
@@ -2919,6 +2936,16 @@ main {
 
   .nav-utility > *:not(.nav-toggle) {
     display: none;
+  }
+
+  .nav-primary,
+  .nav-utility-panel {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+
+  .nav-primary {
+    gap: 10px;
   }
 
   .premium-hero {
