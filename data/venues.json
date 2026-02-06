@@ -1,0 +1,415 @@
+[
+  {
+    "id": "lotus-flow",
+    "name": "Kids Swim Academy",
+    "city": "Berlin",
+    "area": "Prenzlauer Berg",
+    "activity": "Kids Swim",
+    "rating": 4.9,
+    "reviewCount": 210,
+    "image": "assets/yoga.svg",
+    "heroImage": "assets/yoga.svg",
+    "mapEmbed": "https://www.openstreetmap.org/export/embed.html?bbox=13.3600%2C52.5000%2C13.4500%2C52.5400&layer=mapnik&marker=52.5200%2C13.4050",
+    "time": "morning",
+    "mode": "indoor",
+    "offer": "free",
+    "type": "kids",
+    "badges": [
+      "Top Rated",
+      "Free Trial"
+    ],
+    "description": "Playful water\u2011confidence classes for ages 4\u201312 with certified instructors and small groups.",
+    "amenities": [
+      "Warm pool",
+      "Float gear",
+      "Family lounge",
+      "Certified coaches"
+    ],
+    "team": [
+      {
+        "name": "Amira M.",
+        "role": "Lead instructor \u00b7 Kids foundations"
+      },
+      {
+        "name": "Jonas L.",
+        "role": "Program manager \u00b7 Safety + progression"
+      }
+    ],
+    "reviews": [
+      {
+        "quote": "Loved the early morning flow and the welcoming staff.",
+        "author": "Clara"
+      },
+      {
+        "quote": "Clean studio, easy booking, great mix of classes.",
+        "author": "Niklas"
+      }
+    ],
+    "schedule": [
+      "Mon 16:00 \u00b7 Water Confidence \u00b7 45 min",
+      "Wed 17:00 \u00b7 Beginner Swim \u00b7 45 min",
+      "Sat 10:00 \u00b7 Family Splash \u00b7 60 min"
+    ],
+    "courses": "6\u2011week kids foundations program with progress badges.",
+    "workshops": "Holiday intensive and parent\u2011child clinics.",
+    "videos": "Home practice drills and safety videos.",
+    "prices": [
+      {
+        "label": "Drop-in",
+        "value": "\u20ac18 / class"
+      },
+      {
+        "label": "Monthly",
+        "value": "\u20ac89 unlimited"
+      },
+      {
+        "label": "Corporate",
+        "value": "Custom wellness plans"
+      }
+    ],
+    "gallery": [
+      "assets/yoga.svg",
+      "assets/yoga-2.svg",
+      "assets/pilates.svg",
+      "assets/barre.svg"
+    ],
+    "fallbackImage": "assets/yoga.svg"
+  },
+  {
+    "id": "iron-harbor",
+    "name": "Adult Stroke Clinic",
+    "city": "Berlin",
+    "area": "Friedrichshain",
+    "activity": "Adult Swim",
+    "rating": 4.7,
+    "reviewCount": 156,
+    "image": "assets/boxing.svg",
+    "heroImage": "assets/boxing.svg",
+    "mapEmbed": "https://www.openstreetmap.org/export/embed.html?bbox=13.3600%2C52.5000%2C13.4500%2C52.5400&layer=mapnik&marker=52.5200%2C13.4050",
+    "time": "evening",
+    "mode": "indoor",
+    "offer": "newcomer",
+    "type": "adult",
+    "badges": [
+      "Newcomer Deal"
+    ],
+    "description": "Technique\u2011focused classes for adults covering freestyle, breaststroke, and endurance sets.",
+    "amenities": [
+      "Technique cameras",
+      "Lane coaching",
+      "Locker rooms"
+    ],
+    "team": [
+      {
+        "name": "Lena S.",
+        "role": "Head coach \u00b7 Adult stroke clinic"
+      },
+      {
+        "name": "Tariq K.",
+        "role": "Coach \u00b7 Endurance + technique"
+      }
+    ],
+    "reviews": [
+      {
+        "quote": "Tough sessions with great coaching and playlists.",
+        "author": "Max"
+      },
+      {
+        "quote": "Perfect after-work class. Loved the newcomers offer.",
+        "author": "Hannah"
+      }
+    ],
+    "schedule": [
+      "Tue 19:00 \u00b7 Freestyle Clinic \u00b7 60 min",
+      "Thu 20:00 \u00b7 Endurance Lanes \u00b7 60 min",
+      "Sun 09:00 \u00b7 Stroke Fundamentals \u00b7 60 min"
+    ],
+    "courses": "4\u2011week adult stroke clinic and breathing workshops.",
+    "workshops": "Open water preparation and triathlon clinics.",
+    "videos": "Stroke analysis recap and drills.",
+    "prices": [
+      {
+        "label": "Drop-in",
+        "value": "\u20ac20 / class"
+      },
+      {
+        "label": "Monthly",
+        "value": "\u20ac99 unlimited"
+      },
+      {
+        "label": "Corporate",
+        "value": "Team training packages"
+      }
+    ],
+    "gallery": [
+      "assets/boxing.svg",
+      "assets/boxing-2.svg",
+      "assets/hiit.svg",
+      "assets/class.svg"
+    ],
+    "fallbackImage": "assets/boxing.svg"
+  },
+  {
+    "id": "skyline-ride",
+    "name": "Club Lane Bookings",
+    "city": "Hamburg",
+    "area": "Altona",
+    "activity": "Club Lanes",
+    "rating": 4.6,
+    "reviewCount": 98,
+    "image": "assets/cycling.svg",
+    "heroImage": "assets/cycling.svg",
+    "mapEmbed": "https://www.openstreetmap.org/export/embed.html?bbox=9.9500%2C53.5300%2C10.0300%2C53.5700&layer=mapnik&marker=53.5511%2C9.9937",
+    "time": "afternoon",
+    "mode": "indoor",
+    "offer": "corporate",
+    "type": "club",
+    "badges": [
+      "Corporate"
+    ],
+    "description": "Reserved lanes for high\u2011school teams, clubs, and competitive programs.",
+    "amenities": [
+      "Lane reservations",
+      "Coach access",
+      "Team lockers"
+    ],
+    "team": [
+      {
+        "name": "Sven P.",
+        "role": "Club coordinator \u00b7 Lane bookings"
+      }
+    ],
+    "reviews": [
+      {
+        "quote": "Perfect mid-day ride with a view.",
+        "author": "Lucia"
+      }
+    ],
+    "schedule": [
+      "Mon 18:00 \u00b7 6 Lanes Reserved \u00b7 90 min",
+      "Wed 18:00 \u00b7 6 Lanes Reserved \u00b7 90 min",
+      "Fri 17:00 \u00b7 Sprint Sets \u00b7 60 min"
+    ],
+    "courses": "Seasonal club packages with invoicing and admin tools.",
+    "workshops": "Coach clinics and meet prep sessions.",
+    "videos": "Team training templates.",
+    "prices": [
+      {
+        "label": "Drop-in",
+        "value": "\u20ac16 / class"
+      },
+      {
+        "label": "Monthly",
+        "value": "\u20ac79 unlimited"
+      },
+      {
+        "label": "Corporate",
+        "value": "Company credits"
+      }
+    ],
+    "gallery": [
+      "assets/cycling.svg",
+      "assets/cycling-2.svg",
+      "assets/hiit-2.svg",
+      "assets/class.svg"
+    ],
+    "fallbackImage": "assets/cycling.svg"
+  },
+  {
+    "id": "harbor-barre",
+    "name": "Aqua Therapy Online",
+    "city": "Berlin",
+    "area": "Online",
+    "activity": "Aqua Therapy",
+    "rating": 4.8,
+    "reviewCount": 132,
+    "image": "assets/barre.svg",
+    "heroImage": "assets/barre.svg",
+    "mapEmbed": "https://www.openstreetmap.org/export/embed.html?bbox=5.8000%2C47.2000%2C15.0000%2C55.1000&layer=mapnik&marker=51.1657%2C10.4515",
+    "time": "morning",
+    "mode": "online",
+    "offer": "free",
+    "type": "therapy",
+    "badges": [
+      "Online",
+      "Free Trial"
+    ],
+    "description": "Remote video sessions for technique review, breathing, and safety theory.",
+    "amenities": [
+      "Coach feedback",
+      "Video analysis",
+      "Lesson plans"
+    ],
+    "team": [
+      {
+        "name": "Mia R.",
+        "role": "Lead coach \u00b7 Aqua therapy"
+      }
+    ],
+    "reviews": [
+      {
+        "quote": "Feels like being in the studio, even from home.",
+        "author": "Zoe"
+      }
+    ],
+    "schedule": [
+      "Tue 18:00 \u00b7 Video Review \u00b7 45 min",
+      "Thu 18:30 \u00b7 Technique Q&A \u00b7 45 min"
+    ],
+    "courses": "4\u2011week swim theory and safety program.",
+    "workshops": "Parent safety briefings and preparation kits.",
+    "videos": "On\u2011demand stroke breakdowns.",
+    "prices": [
+      {
+        "label": "Drop-in",
+        "value": "\u20ac10 / class"
+      },
+      {
+        "label": "Monthly",
+        "value": "\u20ac49 unlimited"
+      },
+      {
+        "label": "Corporate",
+        "value": "Remote team access"
+      }
+    ],
+    "gallery": [
+      "assets/barre.svg",
+      "assets/barre-2.svg",
+      "assets/yoga.svg",
+      "assets/pilates-2.svg"
+    ],
+    "fallbackImage": "assets/barre.svg"
+  },
+  {
+    "id": "pulse-district",
+    "name": "Open Water Conditioning",
+    "city": "Munich",
+    "area": "English Garden",
+    "activity": "Open Water",
+    "rating": 4.5,
+    "reviewCount": 84,
+    "image": "assets/hiit.svg",
+    "heroImage": "assets/hiit.svg",
+    "mapEmbed": "https://www.openstreetmap.org/export/embed.html?bbox=11.5400%2C48.1200%2C11.6200%2C48.1500&layer=mapnik&marker=48.1351%2C11.5820",
+    "time": "evening",
+    "mode": "outdoor",
+    "offer": "newcomer",
+    "type": "open-water",
+    "badges": [
+      "Outdoor",
+      "Newcomer Deal"
+    ],
+    "description": "Outdoor conditioning for confident swimmers, with safety crew and endurance focus.",
+    "amenities": [
+      "Safety crew",
+      "Wetsuit support",
+      "Open water route"
+    ],
+    "team": [
+      {
+        "name": "Kai F.",
+        "role": "Coach \u00b7 Open water conditioning"
+      }
+    ],
+    "reviews": [
+      {
+        "quote": "Great energy and a fun outdoor crew.",
+        "author": "Paul"
+      }
+    ],
+    "schedule": [
+      "Sat 08:00 \u00b7 Open Water Session \u00b7 60 min",
+      "Sun 08:00 \u00b7 Endurance Swim \u00b7 60 min"
+    ],
+    "courses": "6\u2011week open water confidence series.",
+    "workshops": "Race prep and navigation clinics.",
+    "videos": "Open water tips and recovery.",
+    "prices": [
+      {
+        "label": "Drop-in",
+        "value": "\u20ac15 / class"
+      },
+      {
+        "label": "Monthly",
+        "value": "\u20ac69 unlimited"
+      },
+      {
+        "label": "Corporate",
+        "value": "Team bootcamps"
+      }
+    ],
+    "gallery": [
+      "assets/hiit.svg",
+      "assets/hiit-2.svg",
+      "assets/boxing.svg",
+      "assets/class.svg"
+    ],
+    "fallbackImage": "assets/hiit.svg"
+  },
+  {
+    "id": "align-pilates",
+    "name": "Adaptive Swim Support",
+    "city": "Berlin",
+    "area": "Charlottenburg",
+    "activity": "Adaptive Swim",
+    "rating": 4.9,
+    "reviewCount": 188,
+    "image": "assets/pilates.svg",
+    "heroImage": "assets/pilates.svg",
+    "mapEmbed": "https://www.openstreetmap.org/export/embed.html?bbox=13.3600%2C52.5000%2C13.4500%2C52.5400&layer=mapnik&marker=52.5200%2C13.4050",
+    "time": "afternoon",
+    "mode": "indoor",
+    "offer": "free",
+    "type": "adaptive",
+    "badges": [
+      "Free Trial"
+    ],
+    "description": "Adaptive swim programs for special\u2011needs participants with trained staff.",
+    "amenities": [
+      "Accessible pool",
+      "Support staff",
+      "Private changing"
+    ],
+    "team": [
+      {
+        "name": "Sara T.",
+        "role": "Lead instructor \u00b7 Adaptive swim"
+      }
+    ],
+    "reviews": [
+      {
+        "quote": "Precise instruction and a beautiful space.",
+        "author": "Leonie"
+      }
+    ],
+    "schedule": [
+      "Mon 15:00 \u00b7 Adaptive Swim \u00b7 45 min",
+      "Thu 15:00 \u00b7 Adaptive Swim \u00b7 45 min"
+    ],
+    "courses": "8\u2011week adaptive program with individualized plans.",
+    "workshops": "Caregiver support and sensory\u2011friendly sessions.",
+    "videos": "Adaptive routines and caregiver guides.",
+    "prices": [
+      {
+        "label": "Drop-in",
+        "value": "\u20ac22 / class"
+      },
+      {
+        "label": "Monthly",
+        "value": "\u20ac109 unlimited"
+      },
+      {
+        "label": "Corporate",
+        "value": "Wellness bundles"
+      }
+    ],
+    "gallery": [
+      "assets/pilates.svg",
+      "assets/pilates-2.svg",
+      "assets/yoga-2.svg",
+      "assets/barre.svg"
+    ],
+    "fallbackImage": "assets/pilates.svg"
+  }
+]

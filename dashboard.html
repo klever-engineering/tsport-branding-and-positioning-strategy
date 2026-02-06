@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard — TSport Swim Platform</title>
+  <meta name="description" content="Logged-in dashboard for courses, bookings, and memberships." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="dashboard-page logged-in">
+  <div class="page-bg"></div>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="logo">TSport Swim Platform</div>
+      <div class="nav-links">
+        <div class="nav-item">
+          <button class="nav-trigger" type="button">For Families</button>
+          <div class="nav-dropdown">
+            <a href="index.html#kids-programs">Kids Programs</a>
+            <a href="index.html#adult-programs">Adult Programs</a>
+            <a href="index.html#how-it-works">How it Works</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <button class="nav-trigger" type="button">For Venues</button>
+          <div class="nav-dropdown">
+            <a href="index.html#venue">List Your Pool</a>
+            <a href="resources.html">Resources</a>
+            <a href="index.html#pricing">Pricing</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <button class="nav-trigger" type="button">For Organizations</button>
+          <div class="nav-dropdown">
+            <a href="index.html#corporate">Corporate Wellness</a>
+            <a href="index.html#club-bookings">Club Bookings</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <button class="nav-trigger" type="button">About</button>
+          <div class="nav-dropdown">
+            <a href="marketing.html">Strategy</a>
+            <a href="index.html#mission">Mission</a>
+            <a href="index.html#contact">Contact</a>
+          </div>
+        </div>
+      </div>      
+      <div class="nav-actions">
+        <a class="ghost nav-dashboard" href="dashboard.html">Dashboard</a>
+        <a class="ghost" href="index.html#discover">Search</a>
+        <a class="ghost" href="dashboard.html">Log in</a>
+        <a class="primary" href="index.html#pricing">Start Free</a>
+      </div>
+        <button class="ghost" data-action="logout">Log out</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="dashboard">
+    <section class="dashboard-hero">
+      <div>
+        <p class="eyebrow">Member space</p>
+        <h1>Welcome back, Jamie.</h1>
+        <p class="sub">Your swim journey is progressing. Here’s what’s next for your family.</p>
+        <div class="quick-actions">
+          <button class="primary" data-action="book-next">Book Next Class</button>
+          <button class="ghost" data-action="refer-friend">Refer a Friend</button>
+          <button class="ghost" data-action="download-report">Download Progress Report</button>
+        </div>
+      </div>
+      <div class="credit-card standout">
+        <h4>Corporate credits</h4>
+        <p class="credit-value">18</p>
+        <span>wellness credits available</span>
+        <button class="primary" data-action="topup">Top up credits</button>
+      </div>
+      <div class="profile-card">
+        <img src="assets/profile.svg" alt="Member profile" />
+        <div>
+          <h4>Jamie Fischer</h4>
+          <p>Parent account · 2 swimmers</p>
+          <button class="ghost" data-action="edit-profile">Edit profile</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="dashboard-grid">
+      <aside class="sidebar">
+        <h3>Account</h3>
+        <ul class="sidebar-links">
+          <li class="active" data-action="switch-section" data-section="Overview">Overview</li>
+          <li data-action="switch-section" data-section="My bookings">My bookings</li>
+          <li data-action="switch-section" data-section="Saved venues">Saved venues</li>
+          <li data-action="switch-section" data-section="Payments">Payments</li>
+          <li data-action="switch-section" data-section="Notifications">Notifications</li>
+          <li data-action="switch-section" data-section="Support">Support</li>
+        </ul>
+        <div class="sidebar-card">
+          <h4>Next class</h4>
+          <p>Tue 18:30 · Kids Swim Foundations</p>
+          <span>Family pool · Group A</span>
+        </div>
+      </aside>
+
+      <div class="dashboard-main">
+        <div class="journey">
+          <div class="journey-card">
+            <h4>Your Swim Journey</h4>
+            <div class="journey-stats">
+              <div>
+                <strong>12</strong>
+                <span>classes completed</span>
+              </div>
+              <div>
+                <strong>3</strong>
+                <span>upcoming sessions</span>
+              </div>
+              <div>
+                <strong>Level 2</strong>
+                <span>current milestone</span>
+              </div>
+            </div>
+            <div class="journey-progress">
+              <div class="progress-step done">
+                <span>Level 1</span>
+                <p>Water confidence</p>
+              </div>
+              <div class="progress-step active">
+                <span>Level 2</span>
+                <p>Kick + float</p>
+              </div>
+              <div class="progress-step">
+                <span>Level 3</span>
+                <p>Stroke basics</p>
+              </div>
+            </div>
+          </div>
+          <div class="journey-card">
+            <h4>Upcoming sessions</h4>
+            <div class="calendar-grid">
+              <div class="calendar-cell muted">M</div>
+              <div class="calendar-cell muted">T</div>
+              <div class="calendar-cell muted">W</div>
+              <div class="calendar-cell muted">T</div>
+              <div class="calendar-cell muted">F</div>
+              <div class="calendar-cell muted">S</div>
+              <div class="calendar-cell muted">S</div>
+              <div class="calendar-cell active">5</div>
+              <div class="calendar-cell">6</div>
+              <div class="calendar-cell">7</div>
+              <div class="calendar-cell active">8</div>
+              <div class="calendar-cell">9</div>
+              <div class="calendar-cell">10</div>
+              <div class="calendar-cell active">11</div>
+            </div>
+            <button class="ghost small" data-action="view-calendar">Open calendar</button>
+          </div>
+        </div>
+
+        <section class="family-progress">
+          <div class="section-title">
+            <h2>Family progress</h2>
+            <p>Track each swimmer’s level, badges, and next steps.</p>
+          </div>
+          <div class="family-grid">
+            <article class="family-card">
+              <img src="assets/profile.svg" alt="Mila Fischer" />
+              <div>
+                <h4>Mila Fischer</h4>
+                <span class="level-badge">Level 2 · Water Confidence</span>
+                <p>Next milestone: 10m freestyle with breathing.</p>
+              </div>
+            </article>
+            <article class="family-card">
+              <img src="assets/profile.svg" alt="Leo Fischer" />
+              <div>
+                <h4>Leo Fischer</h4>
+                <span class="level-badge coral">Level 1 · New Swimmer</span>
+                <p>Next milestone: safe entry + float.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="recommended">
+          <div class="section-title">
+            <h2>Recommended for you</h2>
+            <p>AI‑suggested based on Berlin preferences and family goals.</p>
+          </div>
+          <div class="course-grid">
+            <article class="course-card">
+              <img src="assets/swim-3.svg" alt="Stroke clinic" />
+              <div>
+                <h4>Saturday Stroke Clinic</h4>
+                <p>Based on your Level 2 progress · Prenzlauer Berg</p>
+                <button class="primary" data-book-course="Saturday Stroke Clinic">Book class</button>
+              </div>
+            </article>
+            <article class="course-card">
+              <img src="assets/swim-2.svg" alt="Family foundation" />
+              <div>
+                <h4>Family Foundations</h4>
+                <p>Small group ratio · Sunday 10:00</p>
+                <button class="ghost" data-book-course="Family Foundations">Save for later</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="bookings">
+          <div class="section-title">
+            <h2>Upcoming bookings</h2>
+            <p>Tap a booking to manage or cancel.</p>
+          </div>
+          <div class="booking-list" id="booking-list">
+            <div class="booking-item">
+              <img
+                src="assets/swim-2.svg"
+                alt="Kids swim class"
+                data-fallback="assets/swim.svg"
+              />
+              <div>
+                <h4>Kids Swim Foundations</h4>
+                <p>Tue 18:30 · Family pool</p>
+                <span>Booked by parent account</span>
+              </div>
+              <button class="ghost small" data-action="manage-booking">Manage</button>
+            </div>
+            <div class="booking-item">
+              <img
+                src="assets/swim-3.svg"
+                alt="Adult swim clinic"
+                data-fallback="assets/swim.svg"
+              />
+              <div>
+                <h4>Adult Stroke Clinic</h4>
+                <p>Thu 20:00 · Technique lanes</p>
+                <span>Booked by corporate wellness</span>
+              </div>
+              <button class="ghost small" data-action="manage-booking">Manage</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="courses">
+          <div class="section-title">
+            <h2>Course library</h2>
+            <p>Swim programs booked by parents, clubs, and organizations.</p>
+          </div>
+          <div class="course-grid">
+            <article class="course-card">
+              <img src="assets/swim-2.svg" alt="Kids swim course" data-fallback="assets/swim.svg" />
+              <div>
+                <h4>Kids Swim Foundations</h4>
+                <p>Mon & Wed · 6 weeks · Beginner pool</p>
+                <button class="primary" data-book-course="Kids Swim Foundations">Book course</button>
+              </div>
+            </article>
+            <article class="course-card">
+              <img src="assets/swim-3.svg" alt="Adult swim clinic" data-fallback="assets/swim.svg" />
+              <div>
+                <h4>Adult Stroke Clinic</h4>
+                <p>Tue & Thu · 4 weeks · Technique lanes</p>
+                <button class="primary" data-book-course="Adult Stroke Clinic">Book course</button>
+              </div>
+            </article>
+            <article class="course-card">
+              <img src="assets/swim.svg" alt="Aqua therapy" data-fallback="assets/swim.svg" />
+              <div>
+                <h4>Adaptive Swim Support</h4>
+                <p>Fri · 8 weeks · Special‑needs program</p>
+                <button class="primary" data-book-course="Adaptive Swim Support">Book course</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="courses">
+          <div class="section-title">
+            <h2>Quick bookings</h2>
+            <p>Fast booking for clubs, schools, and families.</p>
+          </div>
+          <div class="course-grid">
+            <article class="course-card">
+              <img src="assets/swim-2.svg" alt="Kids swim class" data-fallback="assets/swim.svg" />
+              <div>
+                <h4>Aqua Therapy Seniors</h4>
+                <p>Tomorrow 10:00 · Assisted pool</p>
+                <button class="ghost" data-book-course="Aqua Therapy Seniors">Book class</button>
+              </div>
+            </article>
+            <article class="course-card">
+              <img src="assets/swim-3.svg" alt="Club lane training" data-fallback="assets/swim.svg" />
+              <div>
+                <h4>High-School Club Lanes</h4>
+                <p>Mon 16:00 · 6 lanes reserved</p>
+                <button class="ghost" data-book-course="High-School Club Lanes">Book class</button>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <h3>TSport Swim Platform</h3>
+      <p>Booking, memberships, and discovery for modern wellness businesses.</p>
+    </div>
+    <div class="footer-links">
+      <a href="legal.html#privacy">Privacy</a>
+      <a href="legal.html#terms">Terms</a>
+      <a href="legal.html#support">Support</a>
+      <a href="legal.html#status">Status</a>
+    </div>
+    <div class="footer-disclaimer">All elements presented in this website are subject to revision and discussion. This is a clickable prototype to present an idea and is not connected to any real platform or real functionality. It is a workable mockup of how it might look.</div>
+  <div class="footer-credit">
+    <div class="credit-badge">
+      <span class="credit-mark"></span>
+      Human-led, AI-powered — <strong>Klever Engineering</strong>
+    </div>
+    <svg class="credit-wave" viewBox="0 0 160 28" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="creditWave" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#0c8c8a"/>
+          <stop offset="50%" stop-color="#22d3ee"/>
+          <stop offset="100%" stop-color="#f15b7a"/>
+        </linearGradient>
+      </defs>
+      <path d="M2 14c18-10 36-10 54 0s36 10 54 0 36-10 48 0" fill="none" stroke="url(#creditWave)" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="14" cy="14" r="4" fill="#c8f58e"/>
+      <circle cx="148" cy="14" r="4" fill="#f15b7a"/>
+    </svg>
+  </div>
+</footer>
+
+  <div class="toast" id="toast">Booking added.</div>
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-modal-close></div>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header">
+        <h3 id="modal-title">Next step</h3>
+        <button class="ghost small" data-modal-close>Close</button>
+      </div>
+      <p id="modal-body">Choose how you would like to continue.</p>
+      <div class="modal-actions">
+        <button class="primary" data-modal-primary>Continue</button>
+        <button class="ghost" data-modal-close>Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

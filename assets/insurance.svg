@@ -1,0 +1,13 @@
+<svg width="200" height="140" viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c8c8a"/>
+      <stop offset="100%" stop-color="#f15b7a"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="140" rx="20" fill="#f2fbf9"/>
+  <path d="M100 20l55 18v32c0 34-25 64-55 78-30-14-55-44-55-78V38z" fill="url(#shieldGrad)" opacity="0.2"/>
+  <path d="M100 30l45 15v25c0 27-20 52-45 64-25-12-45-37-45-64V45z" fill="url(#shieldGrad)"/>
+  <path d="M78 78l12 12 32-32" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="100" y="125" text-anchor="middle" font-family="Manrope, sans-serif" font-size="12" fill="#0c8c8a" font-weight="700">Insurance Verified</text>
+</svg>

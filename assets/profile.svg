@@ -1,0 +1,34 @@
+<svg width="520" height="520" viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="p1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="50%" stop-color="#0c8c8a"/>
+      <stop offset="100%" stop-color="#f15b7a"/>
+    </linearGradient>
+    <linearGradient id="p2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c8f58e"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <filter id="pGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.05 0 0 0 0 0.55 0 0 0 0 0.52 0 0 0 0.3 0"/>
+      <feBlend in="SourceGraphic" in2="blur" mode="screen"/>
+    </filter>
+  </defs>
+  <rect width="520" height="520" rx="60" fill="#f2fbf9"/>
+  <circle cx="100" cy="110" r="65" fill="#cdeeea"/>
+  <circle cx="420" cy="90" r="50" fill="#f7dfe6"/>
+  <path d="M40 420c60-60 150-90 240-90 90 0 150 20 200 60v70H40z" fill="#e3f7f4"/>
+  <g filter="url(#pGlow)">
+    <circle cx="260" cy="210" r="92" fill="url(#p1)"/>
+  </g>
+  <circle cx="260" cy="210" r="74" fill="#fff" opacity="0.9"/>
+  <circle cx="260" cy="190" r="42" fill="url(#p1)"/>
+  <rect x="190" y="178" width="140" height="28" rx="14" fill="#0f172a"/>
+  <circle cx="220" cy="192" r="18" fill="#e6f7ff"/>
+  <circle cx="300" cy="192" r="18" fill="#e6f7ff"/>
+  <circle cx="220" cy="192" r="8" fill="#0c8c8a"/>
+  <circle cx="300" cy="192" r="8" fill="#0c8c8a"/>
+  <path d="M170 360c0-52 42-94 94-94h-8c52 0 94 42 94 94v20H170z" fill="url(#p2)"/>
+  <path d="M160 300c40 24 72 28 100 30 36 2 70-10 100-30" fill="none" stroke="#22d3ee" stroke-width="8" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,16 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="growGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c8c8a"/>
+      <stop offset="100%" stop-color="#f15b7a"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="32" fill="#f2fbf9"/>
+  <circle cx="100" cy="80" r="38" fill="url(#growGrad)" opacity="0.18"/>
+  <path d="M100 40l10 20 22 3-16 15 4 22-20-10-20 10 4-22-16-15 22-3z" fill="url(#growGrad)"/>
+  <rect x="60" y="120" width="80" height="40" rx="18" fill="#ffffff" stroke="rgba(12,140,138,0.2)" stroke-width="2"/>
+  <rect x="72" y="132" width="56" height="10" rx="5" fill="#cdeeea"/>
+  <rect x="72" y="148" width="40" height="10" rx="5" fill="#cdeeea"/>
+  <circle cx="150" cy="150" r="16" fill="url(#growGrad)"/>
+  <path d="M144 150l4 4 8-8" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

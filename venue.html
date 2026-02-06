@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Venue Profile — TSport Swim Platform</title>
+  <meta name="description" content="Venue profile with classes, prices, and team details." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="venue-page">
+  <div class="page-bg"></div>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="logo">TSport Swim Platform</div>
+      <div class="nav-links">
+        <div class="nav-item">
+          <button class="nav-trigger" type="button">For Families</button>
+          <div class="nav-dropdown">
+            <a href="index.html#kids-programs">Kids Programs</a>
+            <a href="index.html#adult-programs">Adult Programs</a>
+            <a href="index.html#how-it-works">How it Works</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <button class="nav-trigger" type="button">For Venues</button>
+          <div class="nav-dropdown">
+            <a href="index.html#venue">List Your Pool</a>
+            <a href="resources.html">Resources</a>
+            <a href="index.html#pricing">Pricing</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <button class="nav-trigger" type="button">For Organizations</button>
+          <div class="nav-dropdown">
+            <a href="index.html#corporate">Corporate Wellness</a>
+            <a href="index.html#club-bookings">Club Bookings</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <button class="nav-trigger" type="button">About</button>
+          <div class="nav-dropdown">
+            <a href="marketing.html">Strategy</a>
+            <a href="index.html#mission">Mission</a>
+            <a href="index.html#contact">Contact</a>
+          </div>
+        </div>
+      </div>      
+      <div class="nav-actions">
+        <a class="ghost nav-dashboard" href="dashboard.html">Dashboard</a>
+        <a class="ghost" href="index.html#discover">Search</a>
+        <a class="ghost" href="dashboard.html">Log in</a>
+        <a class="primary" href="index.html#pricing">Start Free</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="venue-shell">
+      <div class="venue-hero">
+        <img
+          data-venue-hero
+          src="assets/hero-fitness.svg"
+          alt="Venue hero"
+          data-fallback="assets/hero-studio.svg"
+          loading="lazy"
+        />
+        <div class="venue-info">
+          <div>
+            <h1 data-venue-name>Venue Name</h1>
+            <p data-venue-meta>City · Area · Rating</p>
+          </div>
+          <div class="venue-actions">
+            <button class="primary" data-action="book-now">Book Now</button>
+            <button class="ghost" id="save-btn">♡ Save</button>
+            <button class="ghost" id="share-btn">Share</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="badges" id="venue-badges"></div>
+
+      <div class="booking-cta">
+        <div>
+          <h3>Next available class</h3>
+          <p id="venue-next-class">Tue 18:30 · Kids Swim Foundations · 45 min</p>
+          <span>Credits accepted · Instant confirmation</span>
+        </div>
+        <button class="primary" data-action="book-class">Book this class</button>
+      </div>
+
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-tab="overview">Overview</button>
+        <button class="tab" data-tab="classes">Classes</button>
+        <button class="tab" data-tab="courses">Courses</button>
+        <button class="tab" data-tab="workshops">Workshops</button>
+        <button class="tab" data-tab="videos">Videos</button>
+        <button class="tab" data-tab="prices">Prices</button>
+        <button class="tab" data-tab="team">Team</button>
+        <button class="tab" data-tab="ratings">Ratings</button>
+      </div>
+
+      <div class="tab-panels">
+        <div class="tab-panel active" data-panel="overview">
+          <div class="panel-grid">
+            <div>
+              <h4>About</h4>
+              <p data-venue-description></p>
+              <div class="amenities" id="venue-amenities"></div>
+            </div>
+            <div class="map">
+              <iframe
+                class="map-embed"
+                data-venue-map
+                src="https://www.openstreetmap.org/export/embed.html?bbox=13.3600%2C52.5000%2C13.4500%2C52.5400&layer=mapnik&marker=52.5200%2C13.4050"
+                title="Venue map"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+          <div class="panel-grid">
+            <div>
+              <h4>Media gallery</h4>
+              <div class="media-gallery" id="venue-gallery"></div>
+            </div>
+            <div>
+              <h4>Highlights</h4>
+              <ul class="highlight-list">
+                <li>On-demand video access included</li>
+                <li>Small class sizes with instructor feedback</li>
+                <li>Community events every month</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="panel-grid premium-grid">
+            <div class="premium-card">
+              <h4>Certification badge</h4>
+              <div class="seal-badge">
+                <img src="assets/seal.svg" alt="Certification seal" />
+                <div>
+                  <strong>TSport Standard Verified</strong>
+                  <span>Official facility certification</span>
+                </div>
+              </div>
+              <ul class="check-list">
+                <li>Certified Instructors</li>
+                <li>Water Quality</li>
+                <li>Child Safeguarding</li>
+                <li>Insurance Coverage</li>
+              </ul>
+            </div>
+            <div class="premium-card ratio-card">
+              <h4>Safety ratio</h4>
+              <img src="assets/ratio.svg" alt="Instructor to student ratio" />
+              <div class="ratio-display">
+                <span>1:6</span>
+                <p>kids per instructor</p>
+              </div>
+              <p class="ratio-note">Adaptive programs run at 1:3 with specialist support.</p>
+            </div>
+          </div>
+
+          <div class="panel-grid premium-grid">
+            <div class="premium-card">
+              <h4>Instructor spotlight</h4>
+              <div class="instructor-grid">
+                <div class="instructor-card">
+                  <img src="assets/profile.svg" alt="Instructor Lena" />
+                  <div>
+                    <strong>Lena Fischer</strong>
+                    <span>Gold Swim Cert · Kids Foundations</span>
+                    <p>Specialty: water confidence + parent coaching.</p>
+                  </div>
+                </div>
+                <div class="instructor-card">
+                  <img src="assets/profile.svg" alt="Instructor Malik" />
+                  <div>
+                    <strong>Malik Weber</strong>
+                    <span>Adaptive Swim · Therapy</span>
+                    <p>Specialty: sensory-friendly sessions.</p>
+                  </div>
+                </div>
+                <div class="instructor-card">
+                  <img src="assets/profile.svg" alt="Instructor Sofia" />
+                  <div>
+                    <strong>Sofia Hartmann</strong>
+                    <span>Elite Stroke Coach</span>
+                    <p>Specialty: club lane technique.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="premium-card">
+              <h4>Parent reviews</h4>
+              <div class="review-grid">
+                <blockquote>
+                  “We felt safe from day one. The instructor ratio made a huge difference.”\n                  <span>— Julia, parent of two</span>
+                </blockquote>
+                <blockquote>
+                  “Progress updates are clear and motivating. My son finally enjoys the water.”\n                  <span>— Markus, parent</span>
+                </blockquote>
+                <blockquote>
+                  “Adaptive care was thoughtful and professional. We felt fully supported.”\n                  <span>— Nadine, caregiver</span>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel-grid premium-grid">
+            <div class="premium-card">
+              <h4>Progress tracking</h4>
+              <p>Families follow each swimmer’s skills, milestones, and readiness for the next level.</p>
+              <div class="progress-steps">
+                <div class="progress-step">
+                  <span>Level 1</span>
+                  <p>Water confidence + breathing control</p>
+                </div>
+                <div class="progress-step active">
+                  <span>Level 2</span>
+                  <p>Kick + float + safe entries</p>
+                </div>
+                <div class="progress-step">
+                  <span>Level 3</span>
+                  <p>Stroke basics + endurance</p>
+                </div>
+              </div>
+              <button class="ghost small" data-action="progress">Open parent dashboard</button>
+            </div>
+            <div class="premium-card tracking-card">
+              <img src="assets/marketing-analytics.svg" alt="Progress tracking" loading="lazy" />
+              <div>
+                <strong>Weekly progress reports</strong>
+                <p>Delivered after each session with coach notes and safety tips.</p>
+              </div>
+            </div>
+          </div>
+          <div class="panel-grid">
+            <div>
+              <h4>Team preview</h4>
+              <div id="venue-team"></div>
+            </div>
+            <div>
+              <h4>Reviews preview</h4>
+              <div id="venue-reviews"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-panel" data-panel="classes">
+          <h4>Upcoming classes</h4>
+          <ul class="schedule" id="venue-schedule"></ul>
+        </div>
+
+        <div class="tab-panel" data-panel="courses">
+          <h4>Courses</h4>
+          <p id="venue-courses"></p>
+        </div>
+
+        <div class="tab-panel" data-panel="workshops">
+          <h4>Workshops</h4>
+          <p id="venue-workshops"></p>
+        </div>
+
+        <div class="tab-panel" data-panel="videos">
+          <h4>Videos</h4>
+          <p id="venue-videos"></p>
+        </div>
+
+        <div class="tab-panel" data-panel="prices">
+          <h4>Prices</h4>
+          <div class="price-grid" id="venue-prices"></div>
+        </div>
+
+        <div class="tab-panel" data-panel="team">
+          <h4>Team</h4>
+          <p>Meet the full team on the instructor directory.</p>
+        </div>
+
+        <div class="tab-panel" data-panel="ratings">
+          <h4>Ratings</h4>
+          <p id="venue-rating-summary"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div>
+        <h2>Schedule your next session today.</h2>
+        <p>Explore class availability and confirm with a single click.</p>
+      </div>
+      <button class="primary" data-action="book-spot">Book a spot</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <h3>TSport Swim Platform</h3>
+      <p>Booking, memberships, and discovery for modern wellness businesses.</p>
+    </div>
+    <div class="footer-links">
+      <a href="legal.html#privacy">Privacy</a>
+      <a href="legal.html#terms">Terms</a>
+      <a href="legal.html#support">Support</a>
+      <a href="legal.html#status">Status</a>
+    </div>
+    <div class="footer-disclaimer">All elements presented in this website are subject to revision and discussion. This is a clickable prototype to present an idea and is not connected to any real platform or real functionality. It is a workable mockup of how it might look.</div>
+  <div class="footer-credit">
+    <div class="credit-badge">
+      <span class="credit-mark"></span>
+      Human-led, AI-powered — <strong>Klever Engineering</strong>
+    </div>
+    <svg class="credit-wave" viewBox="0 0 160 28" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="creditWave" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#0c8c8a"/>
+          <stop offset="50%" stop-color="#22d3ee"/>
+          <stop offset="100%" stop-color="#f15b7a"/>
+        </linearGradient>
+      </defs>
+      <path d="M2 14c18-10 36-10 54 0s36 10 54 0 36-10 48 0" fill="none" stroke="url(#creditWave)" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="14" cy="14" r="4" fill="#c8f58e"/>
+      <circle cx="148" cy="14" r="4" fill="#f15b7a"/>
+    </svg>
+  </div>
+</footer>
+
+  <div class="toast" id="toast">Link copied to clipboard.</div>
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-modal-close></div>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header">
+        <h3 id="modal-title">Next step</h3>
+        <button class="ghost small" data-modal-close>Close</button>
+      </div>
+      <p id="modal-body">Choose how you would like to continue.</p>
+      <div class="modal-actions">
+        <button class="primary" data-modal-primary>Continue</button>
+        <button class="ghost" data-modal-close>Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="venue.js"></script>
+</body>
+</html>

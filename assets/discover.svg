@@ -1,0 +1,17 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="discoverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c8c8a"/>
+      <stop offset="100%" stop-color="#f15b7a"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="32" fill="#f2fbf9"/>
+  <circle cx="85" cy="85" r="38" fill="none" stroke="url(#discoverGrad)" stroke-width="8"/>
+  <rect x="115" y="115" width="42" height="14" rx="7" transform="rotate(45 115 115)" fill="url(#discoverGrad)"/>
+  <rect x="40" y="132" width="120" height="10" rx="5" fill="#cdeeea"/>
+  <rect x="55" y="150" width="90" height="10" rx="5" fill="#cdeeea"/>
+  <rect x="70" y="168" width="60" height="10" rx="5" fill="#cdeeea"/>
+  <circle cx="60" cy="132" r="8" fill="url(#discoverGrad)"/>
+  <circle cx="110" cy="150" r="8" fill="url(#discoverGrad)"/>
+  <circle cx="90" cy="168" r="8" fill="url(#discoverGrad)"/>
+</svg>

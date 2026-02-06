@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TSport Swim Platform — Swim Booking Platform</title>
+  <meta name="description" content="Discover swim programs, book classes, and manage memberships for families and clubs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-bg"></div>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="logo">TSport Swim Platform</div>
+      <div class="nav-links">
+        <div class="nav-item">
+          <button class="nav-trigger" type="button">For Families</button>
+          <div class="nav-dropdown">
+            <a href="index.html#kids-programs">Kids Programs</a>
+            <a href="index.html#adult-programs">Adult Programs</a>
+            <a href="index.html#how-it-works">How it Works</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <button class="nav-trigger" type="button">For Venues</button>
+          <div class="nav-dropdown">
+            <a href="index.html#venue">List Your Pool</a>
+            <a href="resources.html">Resources</a>
+            <a href="index.html#pricing">Pricing</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <button class="nav-trigger" type="button">For Organizations</button>
+          <div class="nav-dropdown">
+            <a href="index.html#corporate">Corporate Wellness</a>
+            <a href="index.html#club-bookings">Club Bookings</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <button class="nav-trigger" type="button">About</button>
+          <div class="nav-dropdown">
+            <a href="marketing.html">Strategy</a>
+            <a href="index.html#mission">Mission</a>
+            <a href="index.html#contact">Contact</a>
+          </div>
+        </div>
+      </div>      
+      <div class="nav-actions">
+        <a class="ghost nav-dashboard" href="dashboard.html">Dashboard</a>
+        <a class="ghost" href="index.html#discover">Search</a>
+        <a class="ghost" href="dashboard.html">Log in</a>
+        <a class="primary" href="index.html#pricing">Start Free</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-banner">
+      <img
+        src="assets/hero-fitness.svg"
+        alt="Fitness hero illustration"
+        data-fallback="assets/hero-studio.svg"
+        loading="lazy"
+      />
+    </section>
+    <section class="hero premium-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">TSport Swim Platform</p>
+        <p class="tagline">Swim with Confidence</p>
+        <h1>Safety‑first swim programs with certified instructors and measurable progress.</h1>
+        <p class="sub value-prop">
+          The trusted marketplace connecting families, clubs, and organizations with certified swim programs across Germany.
+        </p>
+        <div class="trust-signals">
+          <span>Certified Instructors Only</span>
+          <span>Safety‑First Ratios</span>
+          <span>Progress Tracking for Parents</span>
+        </div>
+        <div class="hero-cta">
+          <button class="primary" data-action="search">Search classes</button>
+          <button class="ghost" data-action="memberships">Explore memberships</button>
+        </div>
+        <div class="social-proof">
+          <div class="rating-block">
+            <div class="star-row">
+              <img src="assets/star.svg" alt="star" />
+              <img src="assets/star.svg" alt="star" />
+              <img src="assets/star.svg" alt="star" />
+              <img src="assets/star.svg" alt="star" />
+              <img src="assets/star.svg" alt="star" />
+            </div>
+            <strong>4.8★ rating</strong>
+            <span>trusted by families</span>
+          </div>
+          <div>
+            <strong>120k+ bookings</strong>
+            <span>across Germany</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="search-card">
+          <div class="search-row">
+            <label for="location">Location</label>
+            <input id="location" list="location-list" placeholder="City, postal code" />
+            <datalist id="location-list">
+              <option value="Berlin">
+              <option value="Munich">
+              <option value="Hamburg">
+              <option value="Cologne">
+              <option value="Frankfurt">
+            </datalist>
+          </div>
+          <div class="search-row">
+            <label for="activity">Activity</label>
+            <input id="activity" list="activity-list" placeholder="Kids Swim, Adult Swim, Aqua Therapy" />
+            <datalist id="activity-list">
+              <option value="Kids Swim">
+              <option value="Adult Swim">
+              <option value="Aqua Therapy">
+              <option value="Club Lanes">
+              <option value="Open Water">
+              <option value="Special Needs">
+            </datalist>
+          </div>
+          <div class="search-row inline">
+            <button class="primary full" data-action="run-search">Search</button>
+          </div>
+        </div>
+        <div class="quick-filters">
+          <span>Popular</span>
+          <button class="chip">Kids Swim</button>
+          <button class="chip">Adult Swim</button>
+          <button class="chip">Aqua Therapy</button>
+          <button class="chip">Club Lanes</button>
+        </div>
+        <div class="hero-illustrations">
+          <img src="assets/swim.svg" alt="Swimmer illustration" loading="lazy" />
+          <img src="assets/swim-2.svg" alt="Swim class illustration" loading="lazy" />
+          <img src="assets/swim-3.svg" alt="Swim coach illustration" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-rail">
+      <div class="trust-grid">
+        <div class="trust-card">
+          <img src="assets/seal.svg" alt="Certification seal" />
+          <h4>Certification Seal</h4>
+          <p>TSport Standard Verified</p>
+        </div>
+        <div class="trust-card">
+          <img src="assets/ratio.svg" alt="Safety ratio icon" />
+          <h4>Safety Ratio</h4>
+          <p>1:6 kids per instructor</p>
+        </div>
+        <div class="trust-card">
+          <img src="assets/insurance.svg" alt="Insurance verification" />
+          <h4>Insurance Verified</h4>
+          <p>Coverage validated for every venue</p>
+        </div>
+        <div class="trust-card">
+          <div class="verified-stamp large">Verified Facility</div>
+          <h4>Facility Quality</h4>
+          <p>Audited pools and safety checks</p>
+        </div>
+      </div>
+      <div class="partner-logos">
+        <span class="partner-pill">Municipal Swim Program</span>
+        <span class="partner-pill">German Swim Association</span>
+        <span class="partner-pill">School Club Network</span>
+        <span class="partner-pill">City Sports Office</span>
+      </div>
+    </section>
+
+    <section class="programs">
+      <div class="section-title">
+        <h2>Programs for every swimmer</h2>
+        <p>Designed for children, adults, and adaptive needs with certified instruction.</p>
+      </div>
+      <div class="program-grid">
+        <article id="kids-programs" class="program-card">
+          <img src="assets/swim-2.svg" alt="Kids programs" loading="lazy" />
+          <div>
+            <h3>Kids Programs</h3>
+            <p>Water confidence, breathing control, and safety foundations.</p>
+            <button class="ghost small" data-action="search">View kids classes</button>
+          </div>
+        </article>
+        <article id="adult-programs" class="program-card">
+          <img src="assets/swim-3.svg" alt="Adult programs" loading="lazy" />
+          <div>
+            <h3>Adult Programs</h3>
+            <p>Technique clinics, endurance, and aqua therapy support.</p>
+            <button class="ghost small" data-action="search">View adult classes</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+      <div class="section-title">
+        <h2>How it works</h2>
+        <p>Premium swim booking in three simple steps.</p>
+      </div>
+      <div class="how-steps">
+        <article class="how-step">
+          <img src="assets/discover.svg" alt="Discover icon" />
+          <h3>Discover</h3>
+          <p>Search by location and activity with smart filters.</p>
+        </article>
+        <article class="how-step">
+          <img src="assets/book.svg" alt="Book icon" />
+          <h3>Book</h3>
+          <p>Select a time and confirm instantly with credit card or credits.</p>
+        </article>
+        <article class="how-step">
+          <img src="assets/grow.svg" alt="Grow icon" />
+          <h3>Grow</h3>
+          <p>Track progress with milestone badges and family updates.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="stakeholders">
+      <div class="section-title">
+        <h2>Built for every stakeholder</h2>
+        <p>Clear benefits for families, venues, corporate programs, and instructors.</p>
+      </div>
+      <div class="stakeholder-grid">
+        <article class="stakeholder-card accent-mint">
+          <div class="stakeholder-icon">
+            <img src="assets/swim-2.svg" alt="Parents and kids" loading="lazy" />
+          </div>
+          <h3>Peace of mind for parents</h3>
+          <ul class="bullet-list">
+            <li>Certified instructors and vetted venues.</li>
+            <li>Progress updates after every level.</li>
+            <li>Easy rescheduling and reminders.</li>
+          </ul>
+          <button class="ghost small" data-action="parents">Explore for Parents</button>
+        </article>
+        <article class="stakeholder-card accent-coral">
+          <div class="stakeholder-icon">
+            <img src="assets/marketing-community.svg" alt="Venue owners" loading="lazy" />
+          </div>
+          <h3>Fill lanes with confidence</h3>
+          <ul class="bullet-list">
+            <li>Demand forecasting and waitlists.</li>
+            <li>Automated payments and invoices.</li>
+            <li>Instructor scheduling in one view.</li>
+          </ul>
+          <button class="ghost small" data-action="owner-demo">Owner Demo</button>
+        </article>
+        <article class="stakeholder-card accent-sky">
+          <div class="stakeholder-icon">
+            <img src="assets/marketing-analytics.svg" alt="Corporate clients" loading="lazy" />
+          </div>
+          <h3>Wellness impact you can prove</h3>
+          <ul class="bullet-list">
+            <li>Usage dashboards and ROI reporting.</li>
+            <li>Flexible credits for employees.</li>
+            <li>Regional coverage for teams.</li>
+          </ul>
+          <button class="ghost small" data-action="corporate">Corporate Programs</button>
+        </article>
+        <article class="stakeholder-card accent-lime">
+          <div class="stakeholder-icon">
+            <img src="assets/swim-3.svg" alt="Instructors" loading="lazy" />
+          </div>
+          <h3>Grow your coaching brand</h3>
+          <ul class="bullet-list">
+            <li>Premium profile and reviews.</li>
+            <li>Automated booking management.</li>
+            <li>Access to club lane demand.</li>
+          </ul>
+          <button class="ghost small" data-action="instructors">Instructor Hub</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="discover" class="discover">
+      <div class="section-title">
+        <h2>Search & discovery</h2>
+        <p>Discover swim programs near you with advanced filtering and shareable URLs.</p>
+      </div>
+      <div class="discover-grid">
+        <aside class="filters">
+          <div class="filter-head">
+            <h3>Filters</h3>
+            <button id="clear-filters" class="ghost small">Clear all</button>
+          </div>
+          <label class="filter-group">
+            <span>Search venues</span>
+            <input id="quick-search" placeholder="Try 'Kids', 'Club', or 'Therapy'" />
+          </label>
+
+          <div class="filter-group">
+            <span>Time of day</span>
+            <label><input type="checkbox" data-filter="time" value="morning" /> Morning</label>
+            <label><input type="checkbox" data-filter="time" value="afternoon" /> Afternoon</label>
+            <label><input type="checkbox" data-filter="time" value="evening" /> Evening</label>
+          </div>
+
+          <div class="filter-group">
+            <span>Offering</span>
+            <label><input type="checkbox" data-filter="mode" value="indoor" /> Indoor</label>
+            <label><input type="checkbox" data-filter="mode" value="outdoor" /> Outdoor</label>
+            <label><input type="checkbox" data-filter="mode" value="online" /> Online</label>
+            <label><input type="checkbox" data-filter="mode" value="video" /> Video</label>
+          </div>
+
+          <div class="filter-group">
+            <span>Trial offers</span>
+            <label><input type="checkbox" data-filter="offer" value="free" /> Free trial</label>
+            <label><input type="checkbox" data-filter="offer" value="newcomer" /> Newcomer deals</label>
+            <label><input type="checkbox" data-filter="offer" value="corporate" /> Corporate deals</label>
+          </div>
+
+          <div class="filter-group">
+            <span>Program type</span>
+            <div class="pill-row">
+              <button class="pill" data-filter="type" data-value="kids">Kids</button>
+              <button class="pill" data-filter="type" data-value="adult">Adult</button>
+              <button class="pill" data-filter="type" data-value="therapy">Therapy</button>
+              <button class="pill" data-filter="type" data-value="club">Club</button>
+              <button class="pill" data-filter="type" data-value="open-water">Open Water</button>
+              <button class="pill" data-filter="type" data-value="adaptive">Adaptive</button>
+            </div>
+          </div>
+        </aside>
+
+        <section class="results">
+          <div class="results-head">
+            <div>
+              <h3>Results</h3>
+              <p><span id="result-count">0</span> venues match your filters</p>
+            </div>
+            <div class="chips" id="active-chips"></div>
+          </div>
+
+          <div class="card-grid" id="venue-cards"></div>
+          <div id="empty-state" class="empty-state">
+            <h4>No venues found</h4>
+            <p>Try removing a filter or searching a different city or activity.</p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="venue" class="venue">
+      <div class="section-title">
+        <h2>Venue profile experience</h2>
+        <p>Multi-tab navigation, media galleries, and a prominent booking CTA.</p>
+      </div>
+
+      <div class="venue-shell">
+        <div class="venue-hero">
+          <img
+            src="assets/yoga.svg"
+            alt="Swim program"
+            data-fallback="assets/yoga.svg"
+            loading="lazy"
+          />
+          <div class="venue-info">
+            <div>
+              <h3>TSport Swim Center</h3>
+              <p>Berlin · Prenzlauer Berg · 4.9★</p>
+            </div>
+            <div class="venue-actions">
+              <button class="primary" data-action="book-now">Book Now</button>
+              <button class="ghost" id="venue-save-btn">♡ Save</button>
+              <button class="ghost">Share</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="tabs" role="tablist">
+          <button class="tab active" data-tab="overview">Overview</button>
+          <button class="tab" data-tab="classes">Classes</button>
+          <button class="tab" data-tab="courses">Courses</button>
+          <button class="tab" data-tab="workshops">Workshops</button>
+          <button class="tab" data-tab="videos">Videos</button>
+          <button class="tab" data-tab="prices">Prices</button>
+          <button class="tab" data-tab="team">Team</button>
+          <button class="tab" data-tab="ratings">Ratings</button>
+        </div>
+
+        <div class="tab-panels">
+          <div class="tab-panel active" data-panel="overview">
+            <div class="panel-grid">
+              <div>
+                <h4>About</h4>
+                <p>
+                  A warm, family-friendly pool offering kids foundations, adult clinics, and adaptive swim programs.
+                  Memberships include progress tracking and safety briefings.
+                </p>
+                <div class="amenities">
+                  <span>Mat rental</span>
+                  <span>Showers</span>
+                  <span>Lockers</span>
+                  <span>Tea bar</span>
+                </div>
+              </div>
+              <div class="map">
+                <iframe
+                  class="map-embed"
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=13.3600%2C52.5000%2C13.4500%2C52.5400&layer=mapnik&marker=52.5200%2C13.4050"
+                  title="Map of TSport Swim Center location"
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+            <div class="panel-grid">
+              <div>
+                <h4>Team preview</h4>
+                <div class="team">
+                  <div class="avatar">AM</div>
+                  <div>
+                    <strong>Amira M.</strong>
+                  <p>Lead instructor · Kids foundations</p>
+                  </div>
+                </div>
+                <div class="team">
+                  <div class="avatar">JL</div>
+                  <div>
+                    <strong>Jonas L.</strong>
+                  <p>Program manager · Adult clinics</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h4>Reviews preview</h4>
+                <div class="review">
+                  <p>“Our kids gained confidence in the water so quickly.”</p>
+                  <span>— Clara</span>
+                </div>
+                <div class="review">
+                  <p>“Booking lanes for our club is seamless and reliable.”</p>
+                  <span>— Niklas</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel" data-panel="classes">
+            <h4>Upcoming classes</h4>
+            <ul class="schedule">
+              <li>Mon 16:00 · Kids Water Confidence · 45 min</li>
+              <li>Mon 18:30 · Adult Stroke Clinic · 60 min</li>
+              <li>Tue 12:00 · Aqua Therapy · 45 min</li>
+              <li>Wed 19:00 · Club Lanes · 60 min</li>
+            </ul>
+          </div>
+
+          <div class="tab-panel" data-panel="courses">
+            <h4>Courses</h4>
+            <p>6-week kids foundations, 4-week adult stroke clinic, and adaptive swim support.</p>
+          </div>
+
+          <div class="tab-panel" data-panel="workshops">
+            <h4>Workshops</h4>
+            <p>Parent safety briefings, open water prep, and club coach clinics.</p>
+          </div>
+
+          <div class="tab-panel" data-panel="videos">
+            <h4>Videos</h4>
+            <p>Access technique breakdowns, safety guides, and home drills.</p>
+          </div>
+
+          <div class="tab-panel" data-panel="prices">
+            <h4>Prices</h4>
+            <div class="price-grid">
+              <div class="price-card">
+                <h5>Drop-in</h5>
+                <p>€18 / class</p>
+              </div>
+              <div class="price-card">
+                <h5>Monthly</h5>
+                <p>€89 unlimited</p>
+              </div>
+              <div class="price-card">
+                <h5>Corporate</h5>
+                <p>Custom wellness plans</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel" data-panel="team">
+            <h4>Team</h4>
+            <p>8 instructors specializing in flow, recovery, and meditation.</p>
+          </div>
+
+          <div class="tab-panel" data-panel="ratings">
+            <h4>Ratings</h4>
+            <p>4.9 average · 420 reviews · top rated in Berlin.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="benefit-card">
+        <h3>For venue owners</h3>
+        <p>Manage schedules, memberships, pricing, and analytics in one place.</p>
+        <ul>
+          <li>Automated payments and invoices</li>
+          <li>Instructor calendar sync</li>
+          <li>Marketing tools and offers</li>
+        </ul>
+        <button class="ghost small" data-action="venue-demo">Get venue demo</button>
+      </div>
+      <div class="benefit-card">
+        <h3>For instructors</h3>
+        <p>Build your following, launch online programs, and track class demand.</p>
+        <ul>
+          <li>Profile showcase with reviews</li>
+          <li>Waitlist and capacity controls</li>
+          <li>On-demand video sales</li>
+        </ul>
+        <button class="ghost small" data-action="join-instructor">Join as instructor</button>
+      </div>
+    </section>
+
+    <section id="corporate" class="corporate">
+      <div id="club-bookings"></div>
+      <div class="section-title">
+        <h2>Corporate wellness</h2>
+        <p>Flexible employee benefits with insight dashboards and engagement reporting.</p>
+      </div>
+      <div class="corp-steps">
+        <div class="corp-card">
+          <h4>1. Choose credit model</h4>
+          <p>Monthly or quarterly credits with custom activity catalogs.</p>
+        </div>
+        <div class="corp-card">
+          <h4>2. Invite employees</h4>
+          <p>SSO onboarding and regional venue discovery.</p>
+        </div>
+        <div class="corp-card">
+          <h4>3. Track engagement</h4>
+          <p>Attendance, NPS, and utilization reporting in real time.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+      <div class="section-title">
+        <h2>Swim program pricing</h2>
+        <p>Flexible options for families, adults, and clubs — from trial lessons to full‑season lane blocks.</p>
+      </div>
+      <div class="price-grid">
+        <div class="price-tier">
+          <h3>Trial Lesson</h3>
+          <p class="price">€15</p>
+          <p>One‑time intro class for kids or adults.</p>
+          <button class="ghost small" data-action="signup">Book a trial</button>
+        </div>
+        <div class="price-tier highlight">
+          <h3>Family Program</h3>
+          <p class="price">€89</p>
+          <p>4‑week swim foundations + progress tracking.</p>
+          <button class="primary" data-action="start-trial">Enroll a swimmer</button>
+        </div>
+        <div class="price-tier">
+          <h3>Adaptive Care</h3>
+          <p class="price">€120</p>
+          <p>Special‑needs coaching with flexible ratios.</p>
+          <button class="ghost small" data-action="support">Talk to a coordinator</button>
+        </div>
+        <div class="price-tier">
+          <h3>Club & School Lanes</h3>
+          <p class="price">From €320</p>
+          <p>Seasonal lane blocks with invoicing and coach support.</p>
+          <button class="ghost small" data-action="sales">Request lanes</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="mission" class="mission">
+      <div class="section-title">
+        <h2>Our mission</h2>
+        <p>Make certified swim education accessible, trusted, and measurable for every family and organization.</p>
+      </div>
+      <div class="mission-grid">
+        <div class="mission-card">
+          <h3>Safety as a promise</h3>
+          <p>Every venue meets the TSport Standard with certified coaches and audited facilities.</p>
+        </div>
+        <div class="mission-card">
+          <h3>Progress you can see</h3>
+          <p>Families receive clear milestones and progress reports after each session.</p>
+        </div>
+        <div class="mission-card">
+          <h3>Trust for institutions</h3>
+          <p>Clubs and schools receive reporting, invoicing, and dependable lane access.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="section-title">
+        <h2>FAQ</h2>
+      </div>
+      <div class="faq-grid">
+        <div>
+          <h4>How do refunds work?</h4>
+          <p>Refund policies are set by venues; users can manage cancellations from their profile.</p>
+        </div>
+        <div>
+          <h4>Do you support multi-role accounts?</h4>
+          <p>Yes, customers can also be instructors or venue owners with one login.</p>
+        </div>
+        <div>
+          <h4>Is there a mobile app?</h4>
+          <p>Native apps are planned. This PoC shows core web flows.</p>
+        </div>
+        <div>
+          <h4>What about GDPR compliance?</h4>
+          <p>Consent management, data export, and deletion tools are built into the roadmap.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="section-title">
+        <h2>Contact</h2>
+        <p>Talk with our team about onboarding venues, clubs, or family programs.</p>
+      </div>
+      <div class="contact-card">
+        <div>
+          <h3>Schedule a call</h3>
+          <p>We’ll map the right program mix for your city.</p>
+        </div>
+        <button class="primary" data-action="schedule-demo">Book a consultation</button>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div>
+        <h2>Ready to launch your wellness marketplace?</h2>
+        <p>Bring venues, instructors, and corporate clients together on one platform.</p>
+      </div>
+      <button class="primary" data-action="schedule-demo">Schedule a demo</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <h3>TSport Swim Platform</h3>
+      <p>Booking, memberships, and discovery for modern wellness businesses.</p>
+    </div>
+      <div class="footer-links">
+        <a href="legal.html#privacy">Privacy</a>
+        <a href="legal.html#terms">Terms</a>
+        <a href="legal.html#support">Support</a>
+        <a href="legal.html#status">Status</a>
+      </div>
+    <div class="footer-disclaimer">All elements presented in this website are subject to revision and discussion. This is a clickable prototype to present an idea and is not connected to any real platform or real functionality. It is a workable mockup of how it might look.</div>
+  <div class="footer-credit">
+    <div class="credit-badge">
+      <span class="credit-mark"></span>
+      Human-led, AI-powered — <strong>Klever Engineering</strong>
+    </div>
+    <svg class="credit-wave" viewBox="0 0 160 28" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="creditWave" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#0c8c8a"/>
+          <stop offset="50%" stop-color="#22d3ee"/>
+          <stop offset="100%" stop-color="#f15b7a"/>
+        </linearGradient>
+      </defs>
+      <path d="M2 14c18-10 36-10 54 0s36 10 54 0 36-10 48 0" fill="none" stroke="url(#creditWave)" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="14" cy="14" r="4" fill="#c8f58e"/>
+      <circle cx="148" cy="14" r="4" fill="#f15b7a"/>
+    </svg>
+  </div>
+</footer>
+
+  <div class="toast" id="toast">Link copied to clipboard.</div>
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-modal-close></div>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header">
+        <h3 id="modal-title">Next step</h3>
+        <button class="ghost small" data-modal-close>Close</button>
+      </div>
+      <p id="modal-body">Choose how you would like to continue.</p>
+      <div class="modal-actions">
+        <button class="primary" data-modal-primary>Continue</button>
+        <button class="ghost" data-modal-close>Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="onboarding.js"></script>
+</body>
+</html>

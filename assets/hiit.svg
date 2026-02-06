@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Swim Fitness">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#c8f58e" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="100%" stop-color="#ffffff" />
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.7)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0.15)" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)" />
+  <circle cx="180" cy="140" r="130" fill="rgba(255,255,255,0.2)" />
+  <circle cx="980" cy="160" r="160" fill="rgba(255,255,255,0.18)" />
+  <circle cx="980" cy="760" r="200" fill="rgba(12,140,138,0.25)" />
+
+  <rect x="140" y="230" width="520" height="320" rx="32" fill="url(#glass)" />
+  <rect x="200" y="300" width="360" height="16" rx="8" fill="#ffffff" opacity="0.9" />
+  <rect x="200" y="340" width="300" height="12" rx="6" fill="#ffffff" opacity="0.7" />
+  <rect x="200" y="378" width="320" height="12" rx="6" fill="#ffffff" opacity="0.6" />
+
+  
+  <g transform="translate(660 240)">
+    <circle cx="120" cy="120" r="36" fill="#ffffff" opacity="0.95" />
+    <path d="M90 210c90-55 230-55 320 0" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round" />
+    <path d="M70 260c90-55 230-55 320 0" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round" />
+    <path d="M140 120l120 40 60-20" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="280" cy="90" r="22" fill="url(#accent)" />
+    <circle cx="330" cy="70" r="14" fill="rgba(255,255,255,0.7)" />
+  </g>
+
+  <g transform="translate(140 640)">
+    <path d="M0 40c80-40 200-40 280 0" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="10" stroke-linecap="round" />
+    <path d="M300 40c80-40 200-40 280 0" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="10" stroke-linecap="round" />
+    <path d="M600 40c80-40 200-40 280 0" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="10" stroke-linecap="round" />
+  </g>
+
+  <text x="50%" y="54%" text-anchor="middle" font-family="Fraunces, serif" font-size="52" fill="#ffffff">Swim Fitness</text>
+  <text x="50%" y="61%" text-anchor="middle" font-family="Manrope, sans-serif" font-size="24" fill="#ffffff" opacity="0.9">Intervals + stamina</text>
+</svg>
