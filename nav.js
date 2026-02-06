@@ -56,9 +56,9 @@
   const hash = window.location.hash || '';
 
   const navMap = {
-    families: ['#kids-programs', '#adult-programs', '#how-it-works'],
-    venues: ['#venue', '#pricing', 'resources.html'],
-    orgs: ['#corporate', '#club-bookings'],
+    families: ['#kids-programs', '#adult-programs', '#how-it-works', 'families.html'],
+    venues: ['#venue', '#pricing', 'resources.html', 'venues.html'],
+    orgs: ['#corporate', '#club-bookings', 'corporate.html', 'clubs.html'],
     about: ['marketing.html', '#mission', '#contact', 'legal.html']
   };
 
@@ -117,10 +117,16 @@
       'tracking.html',
       'roadmap.html',
       'timeline.html',
-      'offer.html'
+      'offer.html',
+      'venues.html'
     ]);
 
+    const familyPages = new Set(['families.html']);
+    const orgPages = new Set(['corporate.html', 'clubs.html']);
+
     if (venuePages.has(pathname)) return setActiveTrigger('venues');
+    if (familyPages.has(pathname)) return setActiveTrigger('families');
+    if (orgPages.has(pathname)) return setActiveTrigger('orgs');
     if (pathname === 'marketing.html' || pathname === 'legal.html') return setActiveTrigger('about');
   };
 

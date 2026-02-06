@@ -262,7 +262,7 @@ const cardTemplate = (venue) => `
     <div class="card-body">
       <div class="card-head">
         <h4>${venue.name}</h4>
-        <button class="icon-btn" data-fav>♡</button>
+        <button class="icon-btn" data-fav aria-label="Save venue" aria-pressed="false">♡</button>
       </div>
       <p>${venue.area} · ${venue.activity}</p>
       <div class="card-rating">
@@ -296,6 +296,8 @@ const renderCards = () => {
     btn.addEventListener('click', () => {
       const isSaved = btn.textContent === '♡';
       btn.textContent = isSaved ? '♥' : '♡';
+      btn.setAttribute('aria-pressed', isSaved ? 'true' : 'false');
+      btn.setAttribute('aria-label', isSaved ? 'Remove saved venue' : 'Save venue');
       btn.style.background = isSaved ? 'rgba(242, 153, 74, 0.2)' : 'rgba(191, 225, 218, 0.4)';
     });
   });
