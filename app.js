@@ -11,6 +11,8 @@ const modalBody = document.getElementById('modal-body');
 const modalPrimary = document.querySelector('[data-modal-primary]');
 const locationInput = document.getElementById('location');
 const activityInput = document.getElementById('activity');
+const filtersPanel = document.querySelector('.filters');
+const filtersToggle = document.getElementById('filters-toggle');
 
 const filters = {
   time: new Set(),
@@ -364,6 +366,36 @@ clearBtn?.addEventListener('click', () => {
 quickSearch?.addEventListener('input', () => {
   renderCards();
 });
+
+const updateFiltersToggle = () => {
+  if (!filtersPanel || !filtersToggle) return;
+  const isCollapsed = filtersPanel.classList.contains('collapsed');
+  filtersToggle.textContent = isCollapsed ? 'Show filters' : 'Hide filters';
+  filtersToggle.setAttribute('aria-expanded', isCollapsed ? 'false' : 'true');
+};
+
+const setFiltersCollapsed = (collapsed) => {
+  if (!filtersPanel) return;
+  filtersPanel.classList.toggle('collapsed', collapsed);
+  updateFiltersToggle();
+};
+
+filtersToggle?.addEventListener('click', () => {
+  if (!filtersPanel) return;
+  setFiltersCollapsed(!filtersPanel.classList.contains('collapsed'));
+});
+
+const handleResize = () => {
+  if (!filtersPanel) return;
+  if (window.innerWidth <= 900) {
+    setFiltersCollapsed(true);
+  } else {
+    setFiltersCollapsed(false);
+  }
+};
+
+handleResize();
+window.addEventListener('resize', handleResize);
 
 const tabs = document.querySelectorAll('.tab');
 const panels = document.querySelectorAll('.tab-panel');

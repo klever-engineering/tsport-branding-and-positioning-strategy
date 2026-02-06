@@ -155,6 +155,26 @@ img {
   justify-content: flex-end;
 }
 
+.nav-utility-panel {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.nav-utility-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.nav-utility-item {
+  width: 100%;
+  justify-content: flex-start;
+}
+
 .nav-toggle {
   display: none;
 }
@@ -2857,6 +2877,10 @@ main {
     display: flex;
   }
 
+  .nav.nav-open .nav-utility-panel {
+    display: flex;
+  }
+
   .nav-item {
     width: 100%;
   }
@@ -2885,6 +2909,39 @@ main {
 
   .nav-toggle {
     display: inline-flex;
+  }
+
+  .nav-utility {
+    width: 100%;
+    justify-content: flex-start;
+    order: 2;
+  }
+
+  .nav-utility > *:not(.nav-toggle) {
+    display: none;
+  }
+
+  .premium-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-card {
+    order: 2;
+  }
+
+  .filters {
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 16px;
+    box-shadow: var(--card-shadow);
+  }
+
+  .filters.collapsed .filter-group {
+    display: none;
+  }
+
+  .filters.collapsed .pill-row {
+    display: none;
   }
 
   .discover-grid {
@@ -2966,6 +3023,21 @@ main {
 
   .nav-utility .nav-toggle {
     flex: 0 0 40px;
+  }
+
+  button,
+  .nav-trigger,
+  .tab,
+  .pill,
+  .chip,
+  .icon-btn,
+  .ghost,
+  .primary {
+    min-height: 44px;
+  }
+
+  .icon-btn {
+    min-width: 44px;
   }
 
   .hero-copy h1 {

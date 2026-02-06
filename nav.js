@@ -13,6 +13,38 @@
   const nav = document.querySelector('.nav');
   const toggle = document.querySelector('.nav-toggle');
   const primary = document.getElementById('primary-nav');
+  const utility = document.querySelector('.nav-utility');
+
+  if (primary && utility && !document.querySelector('.nav-utility-panel')) {
+    const panel = document.createElement('div');
+    panel.className = 'nav-utility-panel';
+    panel.innerHTML = '<span class="nav-utility-label">Quick access</span>';
+
+    const searchBtn = document.createElement('button');
+    searchBtn.className = 'ghost nav-utility-item';
+    searchBtn.type = 'button';
+    searchBtn.dataset.action = 'search';
+    searchBtn.textContent = 'Search programs';
+
+    const tourBtn = document.createElement('button');
+    tourBtn.className = 'ghost nav-utility-item';
+    tourBtn.type = 'button';
+    tourBtn.dataset.tourStart = '';
+    tourBtn.textContent = 'Take a tour';
+
+    const loginLink = utility.querySelector('a.ghost[href*="dashboard.html"]');
+    const loginClone = loginLink ? loginLink.cloneNode(true) : document.createElement('a');
+    loginClone.classList.add('nav-utility-item');
+    if (!loginClone.getAttribute('href')) {
+      loginClone.setAttribute('href', 'dashboard.html');
+    }
+    loginClone.textContent = 'Log in';
+
+    panel.appendChild(searchBtn);
+    panel.appendChild(tourBtn);
+    panel.appendChild(loginClone);
+    primary.appendChild(panel);
+  }
 
   const setNavOpen = (open) => {
     if (!nav || !toggle) return;
@@ -144,4 +176,15 @@
       }
     });
   }
+
+  document.querySelectorAll('.nav-utility-panel [data-action="search"]').forEach((button) => {
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
+      if (isIndex) {
+        document.getElementById('discover')?.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        window.location.href = 'index.html#discover';
+      }
+    });
+  });
 })();
