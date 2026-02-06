@@ -796,6 +796,74 @@ main {
   font-size: 0.85rem;
 }
 
+.trust-banner,
+.proof-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--gradient-soft);
+  color: var(--mint-dark);
+  font-weight: 600;
+  box-shadow: var(--card-shadow);
+  font-size: 0.9rem;
+}
+
+.proof-pill {
+  font-size: 0.85rem;
+}
+
+.proof-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 12px 0 6px;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--card-shadow);
+  display: grid;
+  gap: 12px;
+}
+
+.testimonial-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.testimonial-meta {
+  font-weight: 600;
+}
+
+.testimonial-city {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.testimonial-metric {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--gradient-soft);
+  color: var(--mint-dark);
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
 .hero-card {
   background: rgba(255, 255, 255, 0.9);
   border-radius: var(--card-radius);
