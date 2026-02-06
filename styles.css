@@ -3025,6 +3025,50 @@ main {
 
 }
 
+@media (hover: none) and (pointer: coarse) {
+  .nav {
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .nav-primary {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    padding: 14px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+
+  .nav.nav-open .nav-primary,
+  .nav.nav-open .nav-utility-panel {
+    display: flex;
+  }
+
+  .nav-utility {
+    width: auto;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+
+  .nav-utility > *:not(.nav-toggle) {
+    display: none;
+  }
+}
+
 @media (max-width: 1100px) {
   .nav {
     justify-content: flex-start;
