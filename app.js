@@ -9,6 +9,8 @@ const modal = document.getElementById('modal');
 const modalTitle = document.getElementById('modal-title');
 const modalBody = document.getElementById('modal-body');
 const modalPrimary = document.querySelector('[data-modal-primary]');
+const locationInput = document.getElementById('location');
+const activityInput = document.getElementById('activity');
 
 const filters = {
   time: new Set(),
@@ -135,7 +137,64 @@ const actionMap = {
     title: 'Book now',
     body: 'Booking flow would open with class times and payment options.',
     primary: 'Select time'
+  },
+  'book-class': {
+    title: 'Reserve this class',
+    body: 'Select your swimmer, confirm time, and use credits or card.',
+    primary: 'Continue to checkout'
+  },
+  'book-spot': {
+    title: 'Reserve a spot',
+    body: 'Choose a session and confirm your booking in seconds.',
+    primary: 'Confirm booking'
+  },
+  'try-search': {
+    toast: 'Pre-filled a demo search. Adjust filters to explore.'
   }
+};
+
+const clearAllFilters = () => {
+  Object.keys(filters).forEach((group) => filters[group].clear());
+  document.querySelectorAll('input[type="checkbox"]').forEach((input) => {
+    input.checked = false;
+  });
+  document.querySelectorAll('.pill').forEach((pill) => pill.classList.remove('active'));
+  updateChips();
+};
+
+const setFilterState = (group, value, active) => {
+  if (!group || !value) return;
+  if (active) {
+    filters[group].add(value);
+  } else {
+    filters[group].delete(value);
+  }
+  document
+    .querySelectorAll(`input[data-filter="${group}"][value="${value}"]`)
+    .forEach((input) => (input.checked = active));
+  document
+    .querySelectorAll(`.pill[data-filter="${group}"][data-value="${value}"]`)
+    .forEach((pill) => pill.classList.toggle('active', active));
+};
+
+const applySearchInputs = (locationValue, activityValue) => {
+  if (locationInput) locationInput.value = locationValue || '';
+  if (activityInput) activityInput.value = activityValue || '';
+  if (quickSearch) {
+    const combined = [locationValue, activityValue].filter(Boolean).join(' ');
+    quickSearch.value = combined;
+  }
+};
+
+const mapActivityToType = (activity = '') => {
+  const normalized = activity.toLowerCase();
+  if (normalized.includes('kids')) return 'kids';
+  if (normalized.includes('adult')) return 'adult';
+  if (normalized.includes('therapy')) return 'therapy';
+  if (normalized.includes('club')) return 'club';
+  if (normalized.includes('open')) return 'open-water';
+  if (normalized.includes('special') || normalized.includes('adaptive')) return 'adaptive';
+  return '';
 };
 
 const handleAction = (action) => {
@@ -143,9 +202,29 @@ const handleAction = (action) => {
   if (!config) return;
   if (action === 'search' || action === 'run-search') {
     document.getElementById('discover')?.scrollIntoView({ behavior: 'smooth' });
+    const activityValue = activityInput?.value || '';
+    const locationValue = locationInput?.value || '';
+    if (locationValue || activityValue) {
+      applySearchInputs(locationValue, activityValue);
+      clearAllFilters();
+      const mappedType = mapActivityToType(activityValue);
+      if (mappedType) setFilterState('type', mappedType, true);
+      renderCards();
+      updateChips();
+    }
   }
   if (action === 'memberships') {
     document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
+  }
+  if (action === 'try-search') {
+    document.getElementById('discover')?.scrollIntoView({ behavior: 'smooth' });
+    clearAllFilters();
+    applySearchInputs('Berlin', 'Kids Swim Foundations');
+    setFilterState('type', 'kids', true);
+    setFilterState('time', 'afternoon', true);
+    setFilterState('mode', 'indoor', true);
+    updateChips();
+    renderCards();
   }
   if (config.toast) showToast(config.toast);
   if (config.title) openModal(config.title, config.body, config.primary);
@@ -276,12 +355,7 @@ quickChips.forEach((chip) => {
 });
 
 clearBtn?.addEventListener('click', () => {
-  Object.keys(filters).forEach((group) => filters[group].clear());
-  document.querySelectorAll('input[type="checkbox"]').forEach((input) => {
-    input.checked = false;
-  });
-  pillButtons.forEach((pill) => pill.classList.remove('active'));
-  updateChips();
+  clearAllFilters();
   renderCards();
 });
 

@@ -13,6 +13,14 @@
   const nav = document.querySelector('.nav');
   const toggle = document.querySelector('.nav-toggle');
   const primary = document.getElementById('primary-nav');
+  const utility = document.querySelector('.nav-utility');
+
+  if (utility && !document.querySelector('.demo-badge')) {
+    const badge = document.createElement('span');
+    badge.className = 'demo-badge';
+    badge.textContent = 'This is a demo';
+    utility.prepend(badge);
+  }
 
   const setNavOpen = (open) => {
     if (!nav || !toggle) return;

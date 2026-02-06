@@ -796,6 +796,35 @@ main {
   font-size: 0.85rem;
 }
 
+.demo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--teal);
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(12, 140, 138, 0.2);
+  box-shadow: var(--card-shadow);
+  margin-left: 12px;
+  white-space: nowrap;
+}
+
+.demo-prompt {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.demo-prompt button {
+  font-weight: 600;
+}
+
 .trust-banner,
 .proof-pill {
   display: inline-flex;
@@ -819,6 +848,26 @@ main {
   flex-wrap: wrap;
   gap: 10px;
   margin: 12px 0 6px;
+}
+
+.calendar-detail {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: var(--card-radius);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: var(--card-shadow);
+  font-size: 0.9rem;
+}
+
+.calendar-detail strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.calendar-detail ul {
+  margin: 0;
+  padding-left: 16px;
+  color: var(--muted);
 }
 
 .testimonial-grid {

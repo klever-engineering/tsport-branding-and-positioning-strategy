@@ -162,4 +162,38 @@ bookButtons.forEach((button) => {
   });
 });
 
+const calendarDetail = document.getElementById('calendar-detail');
+const calendarCells = document.querySelectorAll('.calendar-cell[data-date]');
+const calendarSchedule = {
+  5: ['18:30 · Kids Swim Foundations', '19:30 · Adult Stroke Clinic'],
+  6: ['17:00 · Family Foundations'],
+  7: ['18:00 · Aqua Therapy Seniors'],
+  8: ['16:30 · Club Lanes', '18:00 · Kids Swim Foundations'],
+  9: ['19:00 · Adult Stroke Clinic'],
+  10: ['17:30 · Adaptive Swim Support'],
+  11: ['18:00 · Family Foundations', '19:30 · Stroke Clinic'],
+};
+
+const renderCalendarDetail = (date) => {
+  if (!calendarDetail) return;
+  const sessions = calendarSchedule[date] || [];
+  const listItems = sessions.length
+    ? sessions.map((session) => `<li>${session}</li>`).join('')
+    : '<li>No classes scheduled.</li>';
+  calendarDetail.innerHTML = `
+    <strong>Selected: Feb ${date}</strong>
+    <ul>${listItems}</ul>
+  `;
+};
+
+calendarCells.forEach((cell) => {
+  cell.addEventListener('click', () => {
+    calendarCells.forEach((item) => item.classList.remove('active'));
+    cell.classList.add('active');
+    const date = cell.dataset.date;
+    renderCalendarDetail(date);
+    showToast(`Viewing classes for Feb ${date}.`);
+  });
+});
+
 applyFallbacks();
